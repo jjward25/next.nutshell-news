@@ -7,7 +7,7 @@ export default function HomeVerticals() {
 
         <div className="category-home-vertical" style={{display:"flex", flexDirection:"column"}}>
     
-            <div className='category-header'>Ongoing News</div>
+            <div className='category-header' style={{padding:"15px 0 0 30px"}}>Ongoing News</div>
             <div className='home-posts-wrap'>
                 <HomePostCard/>
                 <HomePostCardExtension/>

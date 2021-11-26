@@ -15,10 +15,14 @@ a {
   box-sizing: border-box;
 }
 
-/** Home Page Components**/
+/** Font Style Components**/
 .category-header{
   font-size:30px; 
   color:#1AC182;
   font-family:'Sanchez', serif;
-  padding:15px 0 0 50px;
+}
+.title-header{
+  font-size:48px; 
+  color:#1AC182;
+  font-family:'Sanchez', regular;
 }

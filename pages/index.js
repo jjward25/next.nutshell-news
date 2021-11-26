@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from './components/header'
 import TwitterBox from './components/twitter-home'
@@ -18,14 +17,14 @@ export default function Home() {
 
       
 
-      <main className="main" style={{backgroundColor:"#F4F7F9"}}>
+      <main className="main" style={{backgroundColor:"#F4F7F9", height:"100vh"}}>
         <Header/>
         
         <div className="home-top" style={{display:"flex"}}>
           <TwitterBox/>
         
           <div className="current-events"> 
-            <div className='category-header'>Current Events </div>
+            <div className='category-header' style={{padding:"15px 0 0 50px"}}>Current Events </div>
             <div className="ce-card-wrap" style={{display:"flex"}}>
               <CurrentEvents/>
             </div>
