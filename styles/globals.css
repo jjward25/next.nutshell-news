@@ -26,3 +26,13 @@ a {
   color:#1AC182;
   font-family:'Sanchez', regular;
 }
+
+.main {
+  min-height: 100vh;
+  height: 100%;
+  background-color:#F4F7F9;
+}
+
+.container {
+  padding: 0 0;
+}

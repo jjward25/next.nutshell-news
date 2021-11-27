@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function HeaderMenu() {
   return (
     
-      <div className="headerwrap" style={{height:"60px",width:"100vw",maxWidth:"100vw",display:"flex",justifyContent:"space-between",alignItems:"center",borderBottom:"1px solid #eaeaea", backgroundColor:"#FFFFFF"}}>
+      <div className="headerwrap" style={{height:"60px",width:"100%",maxWidth:"100vw",display:"flex",justifyContent:"space-between",alignItems:"center",borderBottom:"1px solid #eaeaea", backgroundColor:"#FFFFFF"}}>
         <div className="headerlogowrap" style={{paddingLeft:"15px", display:"flex", height:"auto", alignContent:"center", justifyContent:"center"}}>
           <Link href="/"><img src="/acorn.svg" alt="Nutshell News Logo" className="headerlogo" style={{height:"35px",paddingLeft:"15px", paddingRight:"15px", margin:"0 auto"}}/></Link>
           <Link href="/"><h1 className="headertitle" style={{fontSize: "200%", fontWeight:"bold", margin: "auto",fontFamily:"'Raleway', sans-serif"}}>

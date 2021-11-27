@@ -6,9 +6,9 @@ import HomePostCardExtension from './components/home-post-card-extension';
 
 export default function Search() {
   return (
-    <div className={styles.container}>
+    <div className="container">
 
-      <main className="main" style={{backgroundColor:"#F4F7F9", height:"100vh"}}>
+      <main className="main">
         <Header/>
         
         <div className="search-content-wrap" style={{display:"flex", flexWrap:"wrap"}}>

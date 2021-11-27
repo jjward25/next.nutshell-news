@@ -6,9 +6,9 @@ import HomePostCardExtension from './components/home-post-card-extension';
 
 export default function About() {
   return (
-    <div className={styles.container}>
+    <div className="container">
 
-      <main className="main" style={{backgroundColor:"#F4F7F9", height:"100vh"}}>
+      <main className="main">
         <Header/>
         
         <div className="search-content-wrap" style={{display:"flex", flexDirection:"column", width:"850px", backgroundColor:"#FFFFFF", margin:"0 auto", padding:"15px"}}>
