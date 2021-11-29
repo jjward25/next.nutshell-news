@@ -19,9 +19,9 @@ export default function HeaderMenu() {
           <li className="headerbuttons" style={{fontSize: "125%", fontWeight: "400"}}><Link href="/about">About</Link></li>
         </ul>
 
-        <div className="headersearchwrap" style={{height:"35px", width:"250px", backgroundColor:"lightgray", fontWeight:"600", display:"flex",borderRadius:"8px"}}>
+        <div className="headersearchwrap" style={{height:"35px", width:"250px", backgroundColor:"#E8EFEE", fontWeight:"600", display:"flex",borderRadius:"8px"}}>
           <img src="/searchicon.svg" alt="search" className="headersearchicon" style={{padding:"5px"}}/>
-          <Link href="/search"><p className="headersearchtext" style={{margin:"auto",marginLeft:"0", textAlign:"left"}}> Search</p></Link>
+          <Link href="/search"><p className="headersearchtext" style={{margin:"auto",marginLeft:"0",paddingLeft:"2%", textAlign:"left",color:"#BCC1CB"}}> Search</p></Link>
         </div>
         <div className="headerlogin" style={{height:"35px", width:"90px",borderRadius:"8px", textAlign:"center",fontSize:"125%", fontWeight:"400",backgroundColor:"#1AC182", color:"white",marginRight:"15px"}}>Login</div>
 

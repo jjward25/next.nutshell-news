@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Header from './components/header'
 import HomePostCard from './components/home-post-card';
-
+import Bookmark from './components/bookmark';
 
 export default function Article() {
   return (
@@ -23,7 +23,7 @@ export default function Article() {
                 
                 <div className="post-category-text" style={{color:'#7A8398',fontSize:"15px", fontWeight:"500", fontFamily:"'Montserrat', sans-serif", marginBottom:"10px"}}>POLICY ISSUES</div>
                 
-                <div className="title-header" style={{margin:"0 -4px 15px -4px"}}>{`The Trump & GOP Tax Cuts`}</div>
+                <div className="title-header" style={{margin:"0 -4px 15px -4px"}}>{`Data Analytics`}</div>
 
                 <div className="post-intro-text" style={{fontFamily:"'Montserrat', sans-serif",color:"#364463", fontSize:"17px", lineHeight:"24px", paddingBottom:"25px"}}>
                         Text lorum ipsum this is an article about latin language influence text philosophy text introduction summary recap.
