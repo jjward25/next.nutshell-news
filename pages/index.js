@@ -19,9 +19,8 @@ export default function Home() {
 
       
 
-      <main className="main">
-        <Header/>
-        
+      <main className="main">   
+           
         <div className="home-top" style={{display:"flex"}}>
           <TwitterBox/>
         

@@ -9,7 +9,6 @@ export default function About() {
     <div className="container">
 
       <main className="main">
-        <Header/>
         
         <div className="search-content-wrap" style={{display:"flex", flexDirection:"column", width:"850px", backgroundColor:"#FFFFFF", margin:"0 auto", padding:"15px"}}>
             <div className="title-header" style={{padding:"15px 30px 5px 30px"}}>Nutshell News</div>

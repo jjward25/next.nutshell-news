@@ -7,7 +7,6 @@ export default function Academic() {
     <div className="container">
 
       <main className="main">
-        <Header/>
         
         <div className="home-content-wrap" style={{display:"flex"}}>
           <HomeVerticals/>
