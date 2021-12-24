@@ -7,7 +7,7 @@ import HomePostCardExtension from './components/home-post-card-extension';
 
 export default function Admin() {
 
-    const [postDetails,setPostDetails] = useState({
+    const [details,setDetails] = useState({
         section:"Section",
         category:"Category",
         post:"Post",
@@ -46,21 +46,21 @@ export default function Admin() {
                 <div className='form item'>
                     <div className="category-header" style={{padding:"15px 30px 5px 30px"}}>Section</div>
                     <div className="about-text" style={{padding:"15px 30px 5px 30px", width:"100%"}}>
-                        <input type="text" value={postDetails.section} style={{width:"100%"}}/>
+                        <input type="text" value={details.section} style={{width:"100%"}}/>
                     </div>
                 </div>
 
                 <div className='form item'>
                     <div className="category-header" style={{padding:"15px 30px 5px 30px"}}>Category</div>
                     <div className="about-text" style={{padding:"15px 30px 5px 30px", width:"100%"}}>
-                        <input type="text" value={postDetails.category} style={{width:"100%"}}/>
+                        <input type="text" value={details.category} style={{width:"100%"}} />
                     </div>
                 </div>
 
                 <div className='form item'>
                     <div className="category-header" style={{padding:"15px 30px 5px 30px"}}>Post</div>
                     <div className="about-text" style={{padding:"15px 30px 5px 30px", width:"100%"}}>
-                        <input type="text" value={postDetails.post} style={{width:"100%"}}/>
+                        <input type="text" value={details.post} style={{width:"100%"}} />
                     </div>
                 </div>
 

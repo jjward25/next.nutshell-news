@@ -9,8 +9,7 @@ export default function Search() {
     <div className="container">
 
       <main className="main">
-        <Header/>
-        
+                
         <div className="search-content-wrap" style={{display:"flex", flexWrap:"wrap"}}>
           <div className="search-result-card">
             <HomePostCard/>
