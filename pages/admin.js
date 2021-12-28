@@ -1,43 +1,38 @@
 import { useState } from 'react';
-import styles from '../styles/Home.module.css';
-import Header from './components/header';
-import HomePostCard from './components/home-post-card';
-import HomePostCardExtension from './components/home-post-card-extension';
-
 
 export default function Admin() {
 
-    const [details,setDetails] = useState({
+    const [newBullet,setNewBullet] = useState({
         section:"Section",
         category:"Category",
         post:"Post",
-        postImgSrc:"",
-        postDate:"",
-        postID:"",
+        postImgSrc:"/postimgs/",
+        postDate:"01/01/21",
+        postStatus:"Draft",
+        postID:"1",
         lastUpdate:"",
-        trackedBy:
-            [{
-                userList:[],
-                dateTracked:[]
-            }],
-        content:{
-            subheader:
-                [{
-                    bulletText:"",
-                    bulletCite:"",
-                    bulletLink:"",
-                    bulletPriority:"",
-                    bulletPostDate:""
-                }]
-        }   
-    });
+        subheader:"Subheader",
+        bulletText:"",
+        bulletCite:"",
+        bulletLink:"",
+        bulletPriority:"",
+        bulletPostDate:""
+        });
 
+    const objUpdate = (name) => {
+        return ({target: {value}}) => {
+            setNewBullet(oldValues => ({...oldValues,[name]:value}));
+        }
+    }
 
     return (
     
     <div className="container">
-
-      <main className="main">
+        <head>
+            <title>Admin Panel</title>
+            <meta name="" content="one,two"
+        </head>
+        <main className="main">
         
         <div className="admin-content-wrap" style={{display:"flex", flexDirection:"column", width:"850px", backgroundColor:"#FFFFFF", margin:"0 auto", padding:"15px"}}>
             <form>
@@ -46,21 +41,34 @@ export default function Admin() {
                 <div className='form item'>
                     <div className="category-header" style={{padding:"15px 30px 5px 30px"}}>Section</div>
                     <div className="about-text" style={{padding:"15px 30px 5px 30px", width:"100%"}}>
-                        <input type="text" value={details.section} style={{width:"100%"}}/>
+                        <input type="text" value={newBullet.section} style={{width:"100%"}} onChange={objUpdate('section')}/>
                     </div>
                 </div>
 
                 <div className='form item'>
                     <div className="category-header" style={{padding:"15px 30px 5px 30px"}}>Category</div>
                     <div className="about-text" style={{padding:"15px 30px 5px 30px", width:"100%"}}>
-                        <input type="text" value={details.category} style={{width:"100%"}} />
+                        <input type="text" value={newBullet.category} style={{width:"100%"}} onChange={objUpdate('category')}/>
                     </div>
                 </div>
 
                 <div className='form item'>
                     <div className="category-header" style={{padding:"15px 30px 5px 30px"}}>Post</div>
                     <div className="about-text" style={{padding:"15px 30px 5px 30px", width:"100%"}}>
-                        <input type="text" value={details.post} style={{width:"100%"}} />
+                        <input type="text" value={newBullet.post} style={{width:"100%"}} onChange={objUpdate('post')}/>
+                    </div>
+                    <div className="about-text" style={{padding:"15px 30px 5px 30px", width:"100%"}}>
+                        <input type="text" value={newBullet.postImgSrc} style={{width:"100%"}} onChange={objUpdate('postImgSrc')}/>
+                    </div>
+                    <div className="about-text" style={{padding:"15px 30px 5px 30px", width:"100%"}}>
+                        <input type="text" value={newBullet.postStatus} style={{width:"100%"}} onChange={objUpdate('postStatus')}/>
+                    </div>
+                </div>
+
+                <div className='form item'>
+                    <div className="category-header" style={{padding:"15px 30px 5px 30px"}}>Subheader</div>
+                    <div className="about-text" style={{padding:"15px 30px 5px 30px", width:"100%"}}>
+                        <input type="text" value={newBullet.subheader} style={{width:"100%"}} onChange={objUpdate('subheaders')}/>
                     </div>
                 </div>
 

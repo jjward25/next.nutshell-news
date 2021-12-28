@@ -1,5 +1,4 @@
-import Header from './components/header'
-import HomeVerticals from './components/home-vertical-content'
+import HomeVerticals from '../components/home-vertical-content'
 
 
 export default function Life() {
