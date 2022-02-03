@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import styles from '../styles/Pages.module.scss';
 import TwitterBox from '../front-components/twitter-home'
 import CurrentEvents from '../front-components/current-events-card'
 import HomeVerticals from '../front-components/home-vertical-content'
@@ -6,7 +7,7 @@ import HomeVerticals from '../front-components/home-vertical-content'
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className={styles['container']}>
       <Head>
         <title>Nutshell News</title>
         <meta name="description" content="Adult Education for the Modern World" />
@@ -18,20 +19,20 @@ export default function Home() {
 
       
 
-      <main className="main">   
+      <main className={styles['main']}>   
            
-        <div className="home-top" style={{display:"flex"}}>
+        <div className={styles['home-top']}>
           <TwitterBox/>
         
-          <div className="current-events"> 
-            <div className='category-header' style={{padding:"15px 0 0 50px"}}>Current Events </div>
-            <div className="ce-card-wrap" style={{display:"flex"}}>
+          <div className={styles['current-events']}> 
+            <div className={styles['font-category-header']}>Current Events </div>
+            <div className={styles['ce-card-wrap']}>
               <CurrentEvents/>
             </div>
           </div>
         </div>
         
-        <div className="home-content-wrap" style={{display:"flex"}}>
+        <div className={styles['home-content-wrap']}>
           <HomeVerticals/>
         </div>
 

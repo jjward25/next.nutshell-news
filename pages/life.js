@@ -1,5 +1,5 @@
 import HomeVerticals from '../front-components/home-vertical-content'
-
+import styles from '../styles/Pages.module.scss';
 
 export default function Life() {
   return (
@@ -7,7 +7,7 @@ export default function Life() {
 
       <main className="main">
         
-        <div className="home-content-wrap" style={{display:"flex"}}>
+        <div className={styles['home-content-wrap']}>
           <HomeVerticals/>
         </div>
 

@@ -1,13 +1,14 @@
 import HomeVerticals from '../front-components/home-vertical-content'
+import styles from '../styles/Pages.module.scss';
 
 
 export default function Academic() {
   return (
-    <div className="container">
+    <div className={styles['container']}>
 
-      <main className="main">
+      <main className={styles['main']}>
         
-        <div className="home-content-wrap" style={{display:"flex"}}>
+        <div className={styles['home-content-wrap']}>
           <HomeVerticals/>
         </div>
 

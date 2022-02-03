@@ -1,6 +1,5 @@
 import HomePostCard from "./home-post-card";
 import HomePostCardExtension from "./home-post-card-extension";
-import '../styles/Home.module.css'
 
 export default function HomeVerticals() {
     return (

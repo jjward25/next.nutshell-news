@@ -1,16 +1,15 @@
-import styles from '../styles/Home.module.scss';
 import HomePostCard from '../front-components/home-post-card';
 import HomePostCardExtension from '../front-components/home-post-card-extension';
-
+import styles from '../styles/Pages.module.scss';
 
 export default function Search() {
   return (
-    <div className="container">
+    <div className={styles['container']}>
 
-      <main className="main">
+      <main className={styles['main']}>
                 
-        <div className="search-content-wrap" style={{display:"flex", flexWrap:"wrap"}}>
-          <div className="search-result-card">
+        <div className={styles['search-content-wrap']}>
+          <div className={styles['search-result-card']}>
             <HomePostCard/>
             <HomePostCardExtension/>
             <HomePostCardExtension/>
@@ -18,7 +17,7 @@ export default function Search() {
             <HomePostCardExtension/>
             <HomePostCardExtension/>
           </div>
-          <div className="search-result-card">
+          <div className={styles['search-result-card']}>
             <HomePostCard/>
             <HomePostCardExtension/>
             <HomePostCardExtension/>
@@ -26,7 +25,7 @@ export default function Search() {
             <HomePostCardExtension/>
             <HomePostCardExtension/>
           </div>
-          <div className="search-result-card">
+          <div className={styles['search-result-card']}>
             <HomePostCard/>
             <HomePostCardExtension/>
             <HomePostCardExtension/>
@@ -34,7 +33,7 @@ export default function Search() {
             <HomePostCardExtension/>
             <HomePostCardExtension/>
           </div>
-          <div className="search-result-card">
+          <div className={styles['search-result-card']}>
             <HomePostCard/>
             <HomePostCardExtension/>
             <HomePostCardExtension/>
@@ -42,7 +41,7 @@ export default function Search() {
             <HomePostCardExtension/>
             <HomePostCardExtension/>
           </div>
-          <div className="search-result-card">
+          <div className={styles['search-result-card']}>
             <HomePostCard/>
             <HomePostCardExtension/>
             <HomePostCardExtension/>
@@ -50,7 +49,7 @@ export default function Search() {
             <HomePostCardExtension/>
             <HomePostCardExtension/>
           </div>
-          <div className="search-result-card">
+          <div className={styles['search-result-card']}>
             <HomePostCard/>
             <HomePostCardExtension/>
             <HomePostCardExtension/>
@@ -58,7 +57,7 @@ export default function Search() {
             <HomePostCardExtension/>
             <HomePostCardExtension/>
           </div>
-          <div className="search-result-card">
+          <div className={styles['search-result-card']}>
             <HomePostCard/>
             <HomePostCardExtension/>
             <HomePostCardExtension/>

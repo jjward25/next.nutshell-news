@@ -1,3 +1,5 @@
+import styles from '../styles/Components.module.scss';
+
 export default function HomePostCard() {
  
     var postSelected = false;
@@ -17,9 +19,10 @@ export default function HomePostCard() {
  
     return (
  
-        <div className="post-icon-bg" style={{backgroundColor:"#FFFFFF", height:"45px",width:"45px", marginBottom:"15px", padding:"10px 0"}}>
-        
-            <img src={markImg} alt="bookmark" style={{height:"25px",width:"25px",margin:"auto", display:"block"}} onClick={bookmarkClick()}/>
+        <div className={styles['post-icon-bg']} >
+            <span className={styles['bookmark-img-wrap']} onClick={bookmarkClick()}>
+             <Image src={markImg} alt="bookmark" layout='fill'/>
+            </span>
         
         </div>
 
