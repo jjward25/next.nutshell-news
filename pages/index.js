@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import TwitterBox from '../components/twitter-home'
-import CurrentEvents from '../components/current-events-card'
-import HomeVerticals from '../components/home-vertical-content'
+import TwitterBox from '../front-components/twitter-home'
+import CurrentEvents from '../front-components/current-events-card'
+import HomeVerticals from '../front-components/home-vertical-content'
 
 
 export default function Home() {

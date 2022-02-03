@@ -1,6 +1,6 @@
-import styles from '../styles/Home.module.css'
-import HomePostCard from '../components/home-post-card';
-import Bookmark from '../components/bookmark';
+import styles from '../styles/Home.module.scss'
+import HomePostCard from '../front-components/home-post-card';
+import Bookmark from '../front-components/bookmark';
 
 export default function Article() {
   return (

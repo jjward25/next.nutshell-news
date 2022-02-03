@@ -1,4 +1,4 @@
-import HomeVerticals from '../components/home-vertical-content'
+import HomeVerticals from '../front-components/home-vertical-content'
 
 
 export default function Life() {

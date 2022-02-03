@@ -1,6 +1,6 @@
-import styles from '../styles/Home.module.css';
-import HomePostCard from '../components/home-post-card';
-import HomePostCardExtension from '../components/home-post-card-extension';
+import styles from '../styles/Home.module.scss';
+import HomePostCard from '../front-components/home-post-card';
+import HomePostCardExtension from '../front-components/home-post-card-extension';
 
 
 export default function Search() {
