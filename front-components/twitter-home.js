@@ -1,7 +1,8 @@
+import styles from '../styles/Components.module.scss';
 export default function HeaderMenu() {
     return (
 
-        <div className="twitter-home-wrap" style={{width:"235px", height: "261px", backgroundColor:"#7621D8"}}>
+        <div className={styles['twitter-home-wrap']}>
             Twitter
         </div>
     )

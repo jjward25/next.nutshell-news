@@ -58,6 +58,76 @@
   color: #7621d8;
 }
 
+/***** HEADER *****/
+/***** HEADER *****/
+/***** HEADER *****/
+.headerwrap {
+  height: 60px;
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #ffffff;
+}
+
+.headerlogowrap {
+  padding-left: 15px;
+  display: flex;
+  height: auto;
+  align-content: center;
+  justify-content: center;
+}
+.headertitle {
+  font-size: 200%;
+  font-weight: bold;
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+}
+.headerbuttonslist {
+  display: flex;
+  list-style: none;
+  width: 45vw;
+  justify-content: space-between;
+  padding: 0px;
+  flex-wrap: wrap;
+}
+.headerbuttons {
+  font-size: 125%;
+  font-weight: 400;
+}
+.headersearchwrap {
+  height: 35px;
+  width: 250px;
+  background-color: #e8efee;
+  font-weight: 600;
+  display: flex;
+  border-radius: 8px;
+}
+.headersearchtext {
+  margin: auto;
+  margin-left: 0;
+  padding-left: 2%;
+  text-align: left;
+  color: #bcc1cb;
+}
+.headerlogin {
+  height: 35px;
+  width: 90px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 125%;
+  font-weight: 400;
+  background-color: #1ac182;
+  color: white;
+  margin-right: 15px;
+}
+.search-icon-wrap {
+  position: relative;
+  width: 20px;
+  margin-left: 5px;
+}
 /***** FOOTER *****/
 /***** FOOTER *****/
 /***** FOOTER *****/
@@ -76,14 +146,7 @@
   display: flex;
   flex-direction: column;
 }
-.footer-logo {
-  height: 35px;
-  width: 35px;
-  padding-right: 15px;
-  margin: 0 auto;
-  position: relative;
-}
-.headerlogowrap {
+.footerlogowrap {
   padding-left: 20px;
   padding-top: 20px;
   display: flex;
@@ -91,13 +154,15 @@
   align-content: center;
   justify-content: center;
 }
-.headertitle {
-  font-size: 200%;
-  font-weight: bold;
-  margin: auto;
-  font-family: "Raleway", sans-serif;
+
+.footer-logo {
+  height: 35px;
+  width: 35px;
+  padding-right: 15px;
+  margin: 0 auto;
+  position: relative;
 }
-.headerbuttonslist {
+.footerbuttonslist {
   display: flex;
   list-style: none;
   width: 460px;
@@ -106,7 +171,79 @@
   flex-wrap: wrap;
   margin: 0;
 }
-.headerbuttons {
+.footerbuttons {
   font-size: 100%;
   font-weight: 400;
+}
+/***** HOME POST CARD *****/
+.home-post-card {
+  display: flex;
+  width: 350px;
+  height: 60px;
+  margin: 15px 0 0 30px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+.post-card-bookmark {
+  margin: auto 18px;
+  position: relative;
+  width: 20px;
+  height: 30px;
+}
+.post-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: auto 0;
+  width: 100%;
+}
+.post-card-carot {
+  margin: auto 15px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 15px;
+  padding-top: 6px;
+  width: 10px;
+}
+
+/***** HOME POST CARD EXTENSION *****/
+.home-post-card-extension {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin: 0 0 0 30px;
+}
+.extension-subheader {
+  display: flex;
+}
+.extension-subheader-text {
+  margin: 5px 0 10px 15px;
+}
+.extension-logo-wrap {
+  height: 20px;
+  width: 20px;
+  margin: 5px 0 5px 15px;
+  position: relative;
+}
+
+/***** VERTICAL CONTENT *****/
+.category-home-vertical {
+  display: flex;
+  flex-direction: column;
+}
+.font-category-header {
+  padding: 15px 0 0 30px;
+  font-size: 30px;
+  color: #1ac182;
+  font-family: "Sanchez", serif;
+}
+
+/***** TWITTER *****/
+.twitter-home-wrap {
+  width: 235px;
+  height: 261px;
+  background-color: #7621d8;
 }

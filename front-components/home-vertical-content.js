@@ -1,13 +1,15 @@
 import HomePostCard from "./home-post-card";
 import HomePostCardExtension from "./home-post-card-extension";
+import styles from '../styles/Components.module.scss';
+
 
 export default function HomeVerticals() {
     return (
 
-        <div className="category-home-vertical" style={{display:"flex", flexDirection:"column"}}>
+        <div className={styles['category-home-vertical']}>
     
-            <div className='category-header' style={{padding:"15px 0 0 30px"}}>Ongoing News</div>
-            <div className='home-posts-wrap'>
+            <div className={styles['font-category-header']}>Ongoing News</div>
+            <div className={styles['home-posts-wrap']}>
                 <HomePostCard/>
                 <HomePostCardExtension/>
             </div>

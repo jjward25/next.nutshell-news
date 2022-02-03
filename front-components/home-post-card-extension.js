@@ -1,14 +1,15 @@
+import styles from '../styles/Components.module.scss';
+import Image from 'next/image';
 export default function HomePostCardExtension() {
     return (
 
-        <div className="home-post-card-extension" style={{display:"flex", flexDirection:"colum",
-                                                          width:"350px",height:"auto", 
-                                                          backgroundColor:"#FFFFFF", borderRadius:"4px",
-                                                          margin:"0 0 0 30px"}}>
+        <div className={styles['home-post-card-extension']}>
     
-            <div className="subheader" style={{display:"flex"}}>
-                <img src="/acorn.svg" alt="acorn" style={{height:"20px",margin:"5px 0 5px 15px"}}/>
-                <div className="subheader-text" style={{margin:"5px 0 10px 15px"}}>
+            <div className={styles['extension-subheader']}>
+                <span className={styles['extension-logo-wrap']}>
+                    <Image src="/acorn.svg" alt="acorn" layout='fill'/>
+                </span>
+                <div className={styles['extension-subheader-text']}>
                     Subheader Text
                 </div>
             </div>

@@ -1,29 +1,34 @@
 import Link from 'next/link'
+import styles from '../styles/Components.module.scss';
+import Image from 'next/image';
 
 export default function HeaderMenu() {
   return (
     
-      <div className="headerwrap" style={{height:"60px",width:"100%",maxWidth:"100vw",display:"flex",justifyContent:"space-between",alignItems:"center",borderBottom:"1px solid #eaeaea", backgroundColor:"#FFFFFF"}}>
-        <div className="headerlogowrap" style={{paddingLeft:"15px", display:"flex", height:"auto", alignContent:"center", justifyContent:"center"}}>
+      <div className={styles['headerwrap']} >
+        <div className={styles['headerlogowrap']}>
           <Link href="/"><img src="/acorn.svg" alt="Nutshell News Logo" className="headerlogo" style={{height:"35px",paddingLeft:"15px", paddingRight:"15px", margin:"0 auto"}}/></Link>
-          <Link href="/"><h1 className="headertitle" style={{fontSize: "200%", fontWeight:"bold", margin: "auto",fontFamily:"'Raleway', sans-serif"}}>
-            nutshell news
-          </h1></Link>
+          <Link href="/">
+            <h1 className={styles['headertitle']}>
+            nutshell news</h1>
+          </Link>
         </div>
 
-        <ul className="headerbuttonslist" style={{display:"flex",listStyle:"none", width:"45vw",justifyContent:"space-between", padding:"0px", flexWrap:"wrap"}}>
-          <li className="headerbuttons" style={{fontSize: "125%", fontWeight: "400"}}><Link href="/">News</Link></li>
-          <li className="headerbuttons" style={{fontSize: "125%", fontWeight: "400"}}><Link href="/life">Life</Link></li>
-          <li className="headerbuttons" style={{fontSize: "125%", fontWeight: "400"}}><Link href="/academic">Academic</Link></li>
-          <li className="headerbuttons" style={{fontSize: "125%", fontWeight: "400"}}><Link href="/readinglist">Readling List</Link></li>
-          <li className="headerbuttons" style={{fontSize: "125%", fontWeight: "400"}}><Link href="/about">About</Link></li>
+        <ul className={styles['headerbuttonslist']} >
+          <li className={styles['headerbuttons']} ><Link href="/">News</Link></li>
+          <li className={styles['headerbuttons']}><Link href="/life">Life</Link></li>
+          <li className={styles['headerbuttons']}><Link href="/academic">Academic</Link></li>
+          <li className={styles['headerbuttons']}><Link href="/readinglist">Readling List</Link></li>
+          <li className={styles['headerbuttons']}><Link href="/about">About</Link></li>
         </ul>
 
-        <div className="headersearchwrap" style={{height:"35px", width:"250px", backgroundColor:"#E8EFEE", fontWeight:"600", display:"flex",borderRadius:"8px"}}>
-          <img src="/searchicon.svg" alt="search" className="headersearchicon" style={{padding:"5px"}}/>
-          <Link href="/search"><p className="headersearchtext" style={{margin:"auto",marginLeft:"0",paddingLeft:"2%", textAlign:"left",color:"#BCC1CB"}}> Search</p></Link>
+        <div className={styles['headersearchwrap']} >
+          <span className={styles['search-icon-wrap']}>
+            <Image src="/searchicon.svg" alt="search" layout='fill'/>
+          </span>
+          <Link href="/search"><p className={styles['headersearchtext']}> Search</p></Link>
         </div>
-        <div className="headerlogin" style={{height:"35px", width:"90px",borderRadius:"8px", textAlign:"center",fontSize:"125%", fontWeight:"400",backgroundColor:"#1AC182", color:"white",marginRight:"15px"}}>Login</div>
+        <div className={styles['headerlogin']}>Login</div>
 
       </div>
     

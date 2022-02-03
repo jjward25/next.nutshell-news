@@ -8,7 +8,7 @@ export default function Footer() {
       <div className={styles['footerwrap']}>
         
         <div className={styles['footer-left']}>
-            <div className={styles['headerlogowrap']} >
+            <div className={styles['footerlogowrap']} >
               
               <Link href="/" >    
               <span className={styles['footer-logo']}>
@@ -26,12 +26,12 @@ export default function Footer() {
             
         </div>
 
-        <ul className={styles['headerbuttonslist']}>
-          <li className={styles['headerbuttons']} ><Link href="/">News</Link></li>
-          <li className={styles['headerbuttons']} ><Link href="/life">Life</Link></li>
-          <li className={styles['headerbuttons']} ><Link href="/academic">Academic</Link></li>
-          <li className={styles['headerbuttons']} ><Link href="/readinglist">Readling List</Link></li>
-          <li className={styles['headerbuttons']} ><Link href="/about">About</Link></li>
+        <ul className={styles['footerbuttonslist']}>
+          <li className={styles['footerbuttons']} ><Link href="/">News</Link></li>
+          <li className={styles['footerbuttons']} ><Link href="/life">Life</Link></li>
+          <li className={styles['footerbuttons']} ><Link href="/academic">Academic</Link></li>
+          <li className={styles['footerbuttons']} ><Link href="/readinglist">Readling List</Link></li>
+          <li className={styles['footerbuttons']} ><Link href="/about">About</Link></li>
         </ul>
 
       </div>
