@@ -22,15 +22,9 @@ export default function Home() {
       <main className={styles['main']}>   
            
         <div className={styles['home-top']}>
-          <TwitterBox/>
-        
-          <div className={styles['current-events']}> 
-            <div className={styles['font-category-header']}>Current Events </div>
-            <div className={styles['ce-card-wrap']}>
-              <CurrentEvents/>
-            </div>
-          </div>
+          <CurrentEvents/>
         </div>
+        
         
         <div className={styles['home-content-wrap']}>
           <HomeVerticals/>

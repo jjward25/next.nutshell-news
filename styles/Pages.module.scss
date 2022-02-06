@@ -11,6 +11,7 @@
   color: #1ac182;
   font-family: "Sanchez", regular;
 }
+
 /**** GLOBAL ELEMENTS *****/
 .container {
   padding: 0 0;
@@ -18,22 +19,20 @@
   height: 100%;
 }
 .main {
-  min-height: calc(100vh - 168px);
-  height: 100%;
   background-color: #f4f7f9;
+  min-height: calc(100vh - 60px);
+  @include for-desktop-up {
+    min-height: calc(100vh - 168px);
+    height: 100%;
+  }
 }
+
 /***** ELEMENT STYLING ****/
 .home-top {
   display: flex;
-}
-
-.current-events {
-  margin-left: 25px;
-  padding-top: 10px;
-  .ce-card-wrap {
-    @include for-desktop-up {
-      display: flex;
-    }
+  flex-direction: column;
+  @include for-desktop-up {
+    flex-direction: row;
   }
 }
 
@@ -42,6 +41,7 @@
 }
 .search-content-wrap {
   @include for-desktop-up {
+    margin-top: 5vh;
     display: flex;
     flex-wrap: wrap;
   }
@@ -51,7 +51,11 @@
 /***** POST PAGE *****/
 /***** POST PAGE *****/
 .related-posts {
-  padding: 4vh 0 0 2.5vw;
+  display: none;
+  @include for-desktop-up {
+    padding: 4vh 0 0 2.5vw;
+    max-width: 420px;
+  }
 }
 .article-main-card {
   width: 850px;

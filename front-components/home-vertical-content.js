@@ -1,5 +1,4 @@
 import HomePostCard from "./home-post-card";
-import HomePostCardExtension from "./home-post-card-extension";
 import styles from '../styles/Components.module.scss';
 
 
@@ -11,7 +10,6 @@ export default function HomeVerticals() {
             <div className={styles['font-category-header']}>Ongoing News</div>
             <div className={styles['home-posts-wrap']}>
                 <HomePostCard/>
-                <HomePostCardExtension/>
             </div>
 
         </div>

@@ -3,9 +3,9 @@ import styles from '../styles/Pages.module.scss';
 
 export default function Life() {
   return (
-    <div className="container">
+    <div className={styles['container']}>
 
-      <main className="main">
+      <main className={styles['main']}>
         
         <div className={styles['home-content-wrap']}>
           <HomeVerticals/>

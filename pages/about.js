@@ -1,5 +1,3 @@
-import HomePostCard from '../front-components/home-post-card';
-import HomePostCardExtension from '../front-components/home-post-card-extension';
 import styles from '../styles/Pages.module.scss';
 
 

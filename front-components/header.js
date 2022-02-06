@@ -5,7 +5,8 @@ import Image from 'next/image';
 export default function HeaderMenu() {
   return (
     
-      <div className={styles['headerwrap']} >
+      <div className={styles['headerwrap']}>
+
         <div className={styles['headerlogowrap']}>
           <Link href="/"><img src="/acorn.svg" alt="Nutshell News Logo" className="headerlogo" style={{height:"35px",paddingLeft:"15px", paddingRight:"15px", margin:"0 auto"}}/></Link>
           <Link href="/">
@@ -28,6 +29,7 @@ export default function HeaderMenu() {
           </span>
           <Link href="/search"><p className={styles['headersearchtext']}> Search</p></Link>
         </div>
+        
         <div className={styles['headerlogin']}>Login</div>
 
       </div>
