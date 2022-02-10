@@ -1,28 +1,24 @@
 import pandas as pd
 import pyperclip
 import numpy 
+import json
 
 articleDF = pd.read_excel('C:/Users/Josep/OneDrive/Desktop/Coding/next.nutshell-news/public/NutshellSampleData.xlsx',engine='openpyxl')
 #print(articleDF)
 
-sections = []
-categories = []
-#sections
-for row in articleDF['Section']:
-    if row not in sections:
-        sections.append(row)
-    else:
-        continue
-# Categories
-for x in articleDF['Category']:
-    if x not in categories:
-        categories.append(x)
-    else:
-        continue
-#print(sections)
-#print(categories)
+inputObj = articleDF.to_dict(orient='index')
+#print(inputObj)
 
-outputJson = articleDF.to_json(orient='index')
+outputJson = []
+for row in inputObj.values():
+    #print(row)   
+    outputJson.append(row)
+
+
 print(outputJson)
 
-pyperclip.copy(outputJson)
+with open("posts.json", "w") as write_file:
+    json.dump(outputJson, write_file, indent=4)
+
+#pyperclip.copy((outputJson))
+
