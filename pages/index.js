@@ -1,9 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Pages.module.scss";
 import TwitterBox from "../front-components/twitter-home";
-import CurrentEvents from "../front-components/current-events-card";
 import HomeVerticals from "../front-components/home-vertical-content";
-import CurrentEvents2 from "../front-components/current-events-card copy";
+import CurrentEvents from "../front-components/current-events-card";
+import HomeVerticals2 from "../front-components/home-vertical-content";
 
 export default function Home() {
   return (
@@ -25,11 +25,11 @@ export default function Home() {
 
       <main className={styles["main"]}>
         <div className={styles["home-top"]}>
-          <CurrentEvents2 />
+          <CurrentEvents />
         </div>
 
         <div className={styles["home-content-wrap"]}>
-          <HomeVerticals />
+          <HomeVerticals2 />
         </div>
       </main>
     </div>
