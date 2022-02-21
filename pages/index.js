@@ -3,7 +3,7 @@ import styles from "../styles/Pages.module.scss";
 import TwitterBox from "../front-components/twitter-home";
 import HomeVerticals from "../front-components/home-vertical-content";
 import CurrentEvents from "../front-components/current-events-card";
-import HomeVerticals2 from "../front-components/home-vertical-content";
+import HomeVerticals2 from "../front-components/home-vertical-content copy";
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         <div className={styles["home-content-wrap"]}>
-          <HomeVerticals2 />
+          <HomeVerticals />
         </div>
       </main>
     </div>

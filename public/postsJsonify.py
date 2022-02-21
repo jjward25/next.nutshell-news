@@ -14,7 +14,6 @@ for bulletObj in inputObj.values():
     #print(row)   
     outputJson.append(bulletObj)
 
-
 print(outputJson)
 
 with open("posts.json", "w") as write_file:

@@ -11,7 +11,18 @@ export default function CurrentEvents() {
           .filter((post) => post.Category === "Current Events")
           .map((post) => {
             return (
-              <div className={styles["current-events-card"]} key={post.key}>
+              <div
+                className={styles["current-events-card"]}
+                key={
+                  post.Category +
+                  "." +
+                  post.PostPriority +
+                  "." +
+                  post.SubheaderPriority +
+                  "." +
+                  post.BulletPriority
+                }
+              >
                 <div className={styles["ce-card-header"]}>
                   <div className={styles["ce-card-subheader"]}>
                     <div className={styles["subheader-text"]}>
