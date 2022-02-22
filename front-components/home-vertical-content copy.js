@@ -3,11 +3,13 @@ import styles from "../styles/Components.module.scss";
 import Posts from "../public/posts.json";
 import Content from "../content.json";
 
-export default function HomeVerticals() {
+export default function HomeVerticals2(props) {
   return (
     <div className={styles["category-home-vertical"]}>
-      {Content.News.map((category) => {
-        return <div key={category.values()}> {category} </div>;
+      {Content.filter((section) => section.Section === props.sectionName)[
+        "CategoryArray"
+      ].map((section) => {
+        return <div key={section}> {section.CategoryArray} </div>;
       })}
 
       <div className={styles["font-category-header"]}>Ongoing News</div>

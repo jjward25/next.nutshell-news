@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         <div className={styles["home-content-wrap"]}>
-          <HomeVerticals />
+          <HomeVerticals2 sectionName="News" />
         </div>
       </main>
     </div>
