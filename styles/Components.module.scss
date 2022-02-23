@@ -241,19 +241,15 @@
   font-weight: 400;
 }
 /***** HOME POST CARD *****/
-.full-home-card {
-  margin: auto;
-  width: 80vw;
-  @include for-desktop-up {
-    margin: 0 0 0 25px;
-  }
-}
+
 .home-post-card {
   background-color: #ffffff;
   border-radius: 4px;
   display: flex;
+
   width: 80vw;
   height: 5.5vh;
+
   @include for-desktop-up {
     display: flex;
     width: 350px;
@@ -284,6 +280,17 @@
   height: 15px;
   padding-top: 6px;
   width: 10px;
+  transition: all 2 linear;
+}
+.post-card-carot-rotate {
+  margin: auto 15px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 15px;
+  padding-top: 6px;
+  width: 10px;
+  transform: rotate(90deg);
 }
 
 /***** HOME POST CARD EXTENSION *****/
