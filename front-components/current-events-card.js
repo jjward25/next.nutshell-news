@@ -1,7 +1,5 @@
 import styles from "../styles/Components.module.scss";
 import posts from "../public/posts.json";
-import Content from "../content.json";
-console.log(Content[0].Section);
 
 export default function CurrentEvents() {
   return (

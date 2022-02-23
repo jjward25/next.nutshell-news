@@ -1,4 +1,6 @@
 import pandas as pd
+import pyperclip
+import numpy 
 import json
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
@@ -13,39 +15,49 @@ inputObj = articleDF.to_dict(orient='index')  ## Turns every row into an object
 # Create a master list with objects for each unique section
 ##########
 sectionList = []
-## Creates a key:value pair for each section, with an array for categories
+sectionDupes = []
+## Creates an object for each unique Section
 for contentRowObj in inputObj.values():
-        if contentRowObj['Section'] not in sectionList:
-            sectionList.append(contentRowObj['Section'])           
-#print(sectionList)
+    contentDict = {}
+    contentDict.setdefault("Section",contentRowObj['Section'])  
+    sectionDupes.append(contentDict)
 
-########
-# Create arrays of Category object for each section
-########
-contentObj = {}
-for section in sectionList:      
-    categoryList = []
+## Removes duplicate Section objects for a final array of Section objects
+sectionList = [i for n, i in enumerate(sectionDupes) if i not in sectionDupes[n + 1:]]
+#* print(sectionList)
+
+
+##########
+# For each Section Object, add a list of Category objects: unique objects for each category, with CategoryName:"", CategoryPriority:"", and PostObjArray:[{}]
+##########
+categoryList = []
+## Append the Category objects array to the original Section Object
+for sectionObj in sectionList:  
     catDupes = []
+    ## Filter the content down to the relevant section & Create a loop to make a list of unique Category objects
     for contentRowObj in inputObj.values():
-        if contentRowObj['Section'] == section:
-            categoryDict = {}   
+        
+        if contentRowObj['Section'] == sectionObj['Section']:    
+            categoryDict = {}
             categoryDict.setdefault("CategoryName",contentRowObj['Category'])
             categoryDict.setdefault("CategoryPriority",contentRowObj['CategoryPriority'])
             catDupes.append(categoryDict)
-            categoryList = [i for n, i in enumerate(catDupes) if i not in catDupes[n + 1:]]
-            contentObj[contentRowObj['Section']]=categoryList
         else:
-            continue        
-print(contentObj)
+            continue
+
+    categoryList = [i for n, i in enumerate(catDupes) if i not in catDupes[n + 1:]]
+    #print(categoryList)
+    sectionObj.setdefault("CategoryArray",categoryList)
+    #pp.pprint(sectionList)
+    #* print(sectionList)
 
 
 ##########
 # For each Category Object, add a list of Post objects; unique objects for each post, with PostName, PostDate, PostPriority, etc. and then a SubHeaderObjArray:[{}]
 ##########
-for categoryObjList in contentObj.values():
-    #print(categoryObjList)
-    for categoryObj in categoryObjList:
-        #print(categoryObj)
+for sectionObj in sectionList:
+    
+    for categoryObj in sectionObj['CategoryArray']:
         postList = []
         postDupes = []
         postNames = []
@@ -68,15 +80,15 @@ for categoryObjList in contentObj.values():
 
         postList = [i for n, i in enumerate(postDupes) if i not in postList[n + 1:]]  
         categoryObj.setdefault("PostArray",postList)
-
-
+        #pp.pprint(sectionList)
+ 
 
 ##########
 # For each Post Object, add a list of Subheader objects; unique objects for each subheader, with SHName, SHPriority, etc. and then a BulletObjArray:[{}]
 ##########
-for categoryObjList in contentObj.values():
+for sectionObj in sectionList:
     
-    for categoryObj in categoryObjList:
+    for categoryObj in sectionObj['CategoryArray']:
         
         for postObj in categoryObj['PostArray']:
             shList = []
@@ -105,9 +117,9 @@ for categoryObjList in contentObj.values():
 ##########
 # For each Subheader Object, add a list of bullet objects; unique objects for each bullet, with all remaining bullet details
 ##########
-for categoryObjList in contentObj.values():
+for sectionObj in sectionList:
     
-    for categoryObj in categoryObjList:
+    for categoryObj in sectionObj['CategoryArray']:
         
         for postObj in categoryObj['PostArray']:
 
@@ -134,11 +146,11 @@ for categoryObjList in contentObj.values():
                     else:
                         continue
 
-            bulletList = [i for n, i in enumerate(bulletDupes) if i not in bulletList[n + 1:]]  
-            shObj.setdefault("BulletArray",bulletList)
-            #pp.pprint(sectionList)
+                bulletList = [i for n, i in enumerate(bulletDupes) if i not in bulletList[n + 1:]]  
+                shObj.setdefault("BulletArray",bulletList)
+                #pp.pprint(sectionList)
 
-pp.pprint(contentObj)
-with open("content2.json", "w") as write_file:
-    json.dump(contentObj, write_file, indent=4)
+
+with open("contentOldFormat.json", "w") as write_file:
+    json.dump(sectionList, write_file, indent=4)
     
