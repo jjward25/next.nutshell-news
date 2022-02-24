@@ -1,11 +1,14 @@
 import HomePostCard from "../front-components/home-post-card";
 import Image from "next/image";
 import styles from "../styles/Pages.module.scss";
-import Content from "../content.json";
+import { useRouter } from "next/router";
 
 export default function Article() {
+  const router = useRouter();
+
   return (
     <div className={styles["container"]}>
+      <div>Post #{router.query.id}</div>
       <main className={styles["main"]}>
         <div className={styles["home-content-wrap"]}>
           <div className={styles["related-posts"]}>
@@ -33,7 +36,7 @@ export default function Article() {
 
             <div className={styles["subheader-accordion-closed"]}>
               <p className={styles["subheader-text"]}>Subheader title</p>
-              <span class={styles["subheader-image-wrap"]}>
+              <span className={styles["subheader-image-wrap"]}>
                 <Image
                   src="/purple-arrow-right.png"
                   alt="carrot"
@@ -43,7 +46,7 @@ export default function Article() {
             </div>
             <div className={styles["subheader-accordion-open"]}>
               <p className={styles["subheader-text"]}>Open subheader title</p>
-              <span class={styles["subheader-image-wrap"]}>
+              <span className={styles["subheader-image-wrap"]}>
                 <Image
                   src="/purple-arrow-down.png"
                   alt="carrot"
@@ -53,7 +56,7 @@ export default function Article() {
             </div>
 
             <div className={styles["article-bullet-text"]}>
-              <span class={styles["bullet-image-wrap"]}>
+              <span className={styles["bullet-image-wrap"]}>
                 <Image src="/acorn.svg" alt="acorn" layout="fill" />
               </span>
               <div className={styles["article-bullet-text-wrap"]}>
@@ -68,7 +71,7 @@ export default function Article() {
               </div>
             </div>
             <div className={styles["article-bullet-text"]}>
-              <span class={styles["bullet-image-wrap"]}>
+              <span className={styles["bullet-image-wrap"]}>
                 <Image src="/acorn.svg" alt="acorn" layout="fill" />
               </span>
               <div className={styles["article-bullet-text-wrap"]}>
@@ -89,7 +92,7 @@ export default function Article() {
               </div>
             </div>
             <div className={styles["article-bullet-text"]}>
-              <span class={styles["bullet-image-wrap"]}>
+              <span className={styles["bullet-image-wrap"]}>
                 <Image src="/acorn.svg" alt="acorn" layout="fill" />
               </span>
               <div className={styles["article-bullet-text-wrap"]}>
@@ -106,7 +109,7 @@ export default function Article() {
 
             <div className={styles["subheader-accordion-closed"]}>
               <p className={styles["subheader-text"]}>Subheader title</p>
-              <span class={styles["subheader-image-wrap"]}>
+              <span className={styles["subheader-image-wrap"]}>
                 <Image
                   src="/purple-arrow-right.png"
                   alt="carrot"
@@ -117,7 +120,7 @@ export default function Article() {
 
             <div className={styles["subheader-accordion-closed"]}>
               <p className={styles["subheader-text"]}>Subheader title</p>
-              <span class={styles["subheader-image-wrap"]}>
+              <span className={styles["subheader-image-wrap"]}>
                 <Image
                   src="/purple-arrow-right.png"
                   alt="carrot"
