@@ -15,14 +15,12 @@ export default function HomePostCard(props) {
   }
 
   const [postObj, setPostObj] = useState({});
-
   function selectPost(selectedPost) {
     setPostObj(
       postObjList.filter((post) => {
         post.PostName == selectedPost;
       })
     );
-
     console.log(postObj);
   }
 
