@@ -3,7 +3,6 @@ import Image from "next/image";
 import HomePostCardExtension from "./home-post-card-extension";
 import React, { useState } from "react";
 import Link from "next/link";
-import Content from "../content.json";
 import postObjList from "../postObjList.json";
 
 const ROUTE_POST_ID = "posts/[id]";
