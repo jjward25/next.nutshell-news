@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Pages.module.scss";
 import HomeVerticals from "../front-components/home-vertical-content";
 import CurrentEvents from "../front-components/current-events-card";
+import Content from "../content.json";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
         </div>
 
         <div className={styles["home-content-wrap"]}>
-          <HomeVerticals />
+          <HomeVerticals section={Content.News} />
         </div>
       </main>
     </div>

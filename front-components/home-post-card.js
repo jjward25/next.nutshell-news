@@ -15,21 +15,23 @@ export default function HomePostCard(props) {
         <div className={styles["post-card-bookmark"]}>
           <Image src="/bookmark-unselected.svg" alt="bookmark" layout="fill" />
         </div>
+
         <div className={styles["post-title"]}>{props.postName}</div>
+
         <div
-          className={styles[`post-card-carot${rotateChevron ? "-rotate" : ""}`]}
+          className={styles[`post-card-carot${rotateChevron ? "-open" : ""}`]}
           onClick={() => shExtend()}
         >
           <Image src="/arrow-right.png" alt="carot" layout="fill" />
         </div>
       </div>
 
-      <div className={styles["subheader-list"]}>
+      <div className={styles[`subheader-list${rotateChevron ? "-open" : ""}`]}>
         {props.subheaderList.map((subheader) => {
           return (
             <HomePostCardExtension
               subheader={subheader.SubheaderName}
-              key={subheader}
+              key={`${props.postName}+" "+${subheader}`}
             />
           );
         })}
