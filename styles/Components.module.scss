@@ -120,7 +120,7 @@
   display: flex;
   border-bottom: 1px solid #eaeaea;
   background-color: #ffffff;
-  justify-content: center;
+  justify-content: space-around;
   position: fixed;
   z-index: 10;
   @include for-desktop-up {
@@ -140,8 +140,15 @@
     margin: 0;
   }
 }
+.headerlogo {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
 .headertitle {
   font-size: 200%;
+  width: auto;
   font-weight: bold;
   margin: auto;
   font-family: "Raleway", sans-serif;
