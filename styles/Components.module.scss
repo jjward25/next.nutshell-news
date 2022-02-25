@@ -257,7 +257,24 @@
     height: 60px;
     margin: 15px 0 0 0px;
     background-color: #ffffff;
-    border-radius: 4px;
+    border-radius: 10px;
+  }
+}
+.home-post-card-open {
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+
+  width: 80vw;
+  height: 5.5vh;
+
+  @include for-desktop-up {
+    display: flex;
+    width: 350px;
+    height: 60px;
+    margin: 15px 0 0 0px;
+    background-color: #ffffff;
+    border-radius: 10px 10px 0 0;
   }
 }
 .post-card-bookmark {
@@ -301,6 +318,8 @@
 .subheader-list-open {
   display: flex;
   flex-direction: column;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
 }
 .home-post-card-extension {
   display: flex;
@@ -313,6 +332,7 @@
   @include for-desktop-up {
     display: flex;
     width: 350px;
+    border-radius: 0px;
   }
 }
 .extension-subheader {

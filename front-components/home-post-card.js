@@ -3,7 +3,6 @@ import Image from "next/image";
 import HomePostCardExtension from "./home-post-card-extension";
 import React, { useState } from "react";
 import Link from "next/link";
-import postObjList from "../postObjList.json";
 
 const ROUTE_POST_ID = "/[id]";
 
@@ -15,7 +14,7 @@ export default function HomePostCard(props) {
 
   return (
     <div className={styles["full-home-card"]}>
-      <div className={styles["home-post-card"]}>
+      <div className={styles[`home-post-card${rotateChevron ? "-open" : ""}`]}>
         <div className={styles["post-card-bookmark"]}>
           <Image src="/bookmark-unselected.svg" alt="bookmark" layout="fill" />
         </div>

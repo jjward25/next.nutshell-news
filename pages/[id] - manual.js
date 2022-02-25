@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import postObjList from "../postObjList.json";
 import Content from "../content.json";
 import { useState } from "react";
-import Accordion from "../front-components/postAccordion";
 
 export default function Article() {
   const router = useRouter();
@@ -58,14 +57,43 @@ export default function Article() {
             <div className={styles["font-title-header"]}>{post.PostName}</div>
 
             <div className={styles["post-intro-text"]}>{intro}</div>
-            <ul className={styles["accordion"]}>
-              {postObjList[router.query.id].SubheaderArray.filter(
-                (postObj) => postObj.SubheaderName != "Introduction"
-              ).map((postObj) => {
-                return (
-                  <Accordion
-                    heading={postObj.SubheaderName}
-                    content={postObj.BulletArray.map((bullet) => {
+
+            {postObjList[router.query.id].SubheaderArray.filter(
+              (postObj) => postObj.SubheaderName != "Introduction"
+            ).map((postObj) => {
+              return (
+                <div key={postObj.SubheaderName + postObj.SubheaderPriority}>
+                  <div
+                    className={
+                      styles[
+                        `subheader-accordion${rotateChevron ? "-open" : ""}`
+                      ]
+                    }
+                  >
+                    <p className={styles["subheader-text"]}>
+                      {postObj.SubheaderName}
+                    </p>
+                    <div
+                      className={
+                        styles[
+                          `subheader-image-wrap${rotateChevron ? "-open" : ""}`
+                        ]
+                      }
+                      onClick={() => shExtend()}
+                    >
+                      <Image
+                        src="/purple-arrow-right.png"
+                        alt="carot"
+                        layout="fill"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className={
+                      styles[`bullet-wrap${rotateChevron ? "-open" : ""}`]
+                    }
+                  >
+                    {postObj.BulletArray.map((bullet) => {
                       return (
                         <div
                           key={bullet.BulletPriority}
@@ -79,24 +107,16 @@ export default function Article() {
                               {bullet.BulletText}
                             </div>
                             <div className={styles["article-bullet-citation"]}>
-                              <a
-                                href={bullet.BulletLink}
-                                alt="citation"
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                {bullet.BulletCite}
-                              </a>
+                              {bullet.BulletCite}
                             </div>
                           </div>
                         </div>
                       );
                     })}
-                    key={postObj.SubheaderName + postObj.SubheaderPriority}
-                  />
-                );
-              })}
-            </ul>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <div className={styles["post-social-icons"]}>
