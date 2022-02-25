@@ -27,7 +27,7 @@ const Accordion = ({ heading, content }) => {
           <Image src="/purple-arrow-right.png" alt="carot" layout="fill" />
         </div>
       </div>
-      {isActive && <div className="accordion-content">{content}</div>}
+      {isActive && <div className={styles["accordion-content"]}>{content}</div>}
     </li>
   );
 };

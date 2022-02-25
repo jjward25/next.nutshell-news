@@ -10,6 +10,14 @@
   font-size: 48px;
   color: #1ac182;
   font-family: "Sanchez", regular;
+  margin: auto;
+  margin: auto 10px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  @include for-desktop-up {
+    margin-left: 0;
+  }
 }
 
 /**** GLOBAL ELEMENTS *****/
@@ -20,7 +28,8 @@
 }
 .main {
   background-color: #f4f7f9;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
+  margin-top: 60px;
   @include for-desktop-up {
     min-height: calc(100vh - 168px);
     height: 100%;
@@ -38,6 +47,11 @@
 
 .home-content-wrap {
   display: flex;
+  flex-direction: column;
+
+  @include for-desktop-up {
+    flex-direction: row;
+  }
 }
 .search-content-wrap {
   @include for-desktop-up {
@@ -53,18 +67,25 @@
 .related-posts {
   display: none;
   @include for-desktop-up {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    padding: 4vh 0 0 2.5vw;
+    padding: 20px 0 0 2.5vw;
     max-width: 420px;
   }
 }
 .article-main-card {
-  width: 850px;
+  width: 100vw;
   background-color: #ffffff;
-  margin: 2vh 40px;
+
   border-radius: 4px;
-  padding: 30px 30px;
+  padding: 15px 0 0 0;
+
+  @include for-desktop-up {
+    width: 850px;
+    margin: 20px 40px 2vh 450px;
+    padding: 30px 30px;
+  }
 }
 .post-category-text {
   color: #7a8398;
@@ -72,6 +93,10 @@
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 25px;
+  margin-left: 10px;
+  @include for-desktop-up {
+    margin-left: 0;
+  }
 }
 .post-intro-text {
   font-family: "Montserrat", sans-serif;
@@ -79,9 +104,21 @@
   font-size: 17px;
   line-height: 24px;
   margin: 30px 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  @include for-desktop-up {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .accordion {
   padding: 0;
+}
+.accordion-content {
+  margin-left: 10px;
+  @include for-desktop-up {
+    margin-left: 0;
+  }
 }
 .subheader-accordion {
   color: #2f4454;
@@ -89,6 +126,8 @@
   display: flex;
   flex-direction: column;
   margin: 0;
+  max-width: 100vw;
+  padding-right: 10px;
 }
 .subheader-accordion-open {
   color: #2f4454;
@@ -100,10 +139,18 @@
 .accordion-header {
   display: flex;
   margin: 25px 0;
+  margin-left: 10px;
+  @include for-desktop-up {
+    margin-left: 0;
+  }
 }
 .accordion-header-open {
   display: flex;
   margin: 25px 0 35px 0;
+  margin-left: 10px;
+  @include for-desktop-up {
+    margin-left: 0;
+  }
 }
 .subheader-text {
   font-family: "Montserrat", sans-serif;
@@ -174,7 +221,12 @@
 .post-social-icons {
   display: flex;
   flex-direction: column;
-  margin-top: 73px;
+
+  @include for-desktop-up {
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 1330px;
+  }
 }
 .post-icon-bg {
   background-color: #ffffff;
@@ -186,7 +238,7 @@
 .post-icon-wrap {
   height: 25px;
   width: 25px;
-  margin: 1vh auto;
+  margin: 15px auto;
   display: block;
   position: relative;
 }
