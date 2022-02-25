@@ -220,9 +220,10 @@
 }
 .post-social-icons {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
 
   @include for-desktop-up {
+    flex-direction: column;
     position: fixed;
     margin-top: 20px;
     margin-left: 1330px;

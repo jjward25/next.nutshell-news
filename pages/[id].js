@@ -10,24 +10,38 @@ import Accordion from "../front-components/postAccordion";
 export default function Article() {
   const router = useRouter();
   const post = postObjList[router.query.id];
-  const category = post.Category;
-  const relatedPosts = Content[post.Section].filter(
-    (category) => category.CategoryName == post.Category
-  )[0].PostArray;
 
-  var intro = postObjList[router.query.id].SubheaderArray.filter(
-    (postObj) => postObj.SubheaderName == "Introduction"
-  );
-
-  if (typeof intro[0] == "undefined") {
-    intro = "";
+  var category = "";
+  if (typeof post == "undefined") {
+    category = "Current Events";
   } else {
-    intro = intro[0].BulletArray[0].BulletText;
+    category = post.Category;
   }
 
-  const [rotateChevron, setRotateChevron] = useState(false);
-  function shExtend() {
-    setRotateChevron(!rotateChevron);
+  var relatedPosts = [];
+  if (typeof post == "undefined") {
+    relatedPosts = Content["News"].filter(
+      (category) => category.CategoryName == post.Category
+    )[0].PostArray;
+  } else {
+    relatedPosts = Content[post.Section].filter(
+      (category) => category.CategoryName == post.Category
+    )[0].PostArray;
+  }
+
+  var intro = [];
+  if (typeof postObjList[router.query.id] == "undefined") {
+  } else {
+    intro = postObjList[router.query.id].SubheaderArray.filter(
+      (postObj) => postObj.SubheaderName == "Introduction"
+    );
+  }
+
+  var introText = "";
+  if (typeof intro[0] == "undefined") {
+    introText = "";
+  } else {
+    introText = intro[0].BulletArray[0].BulletText;
   }
 
   return (
@@ -57,7 +71,7 @@ export default function Article() {
 
             <div className={styles["font-title-header"]}>{post.PostName}</div>
 
-            <div className={styles["post-intro-text"]}>{intro}</div>
+            <div className={styles["post-intro-text"]}>{introText}</div>
             <ul className={styles["accordion"]}>
               {postObjList[router.query.id].SubheaderArray.filter(
                 (postObj) => postObj.SubheaderName != "Introduction"
