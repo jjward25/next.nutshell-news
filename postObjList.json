@@ -1,9 +1,11 @@
-[
-  {
+{
+  "Hurricane": {
     "PostName": "Hurricane",
     "PostPriority": 2,
     "PostDate": "11/4/2021",
     "PostUpDate": "",
+    "Category": "Ongoing News",
+    "Section": "News",
     "SubheaderArray": [
       {
         "SubheaderName": "How big is it?",
@@ -21,11 +23,13 @@
       }
     ]
   },
-  {
+  "Data Science": {
     "PostName": "Data Science",
     "PostPriority": 1,
     "PostDate": "11/3/2021",
     "PostUpDate": "",
+    "Category": "Professional Development",
+    "Section": "Life",
     "SubheaderArray": [
       {
         "SubheaderName": "Skills by Salary Range",
@@ -43,11 +47,13 @@
       }
     ]
   },
-  {
+  "Hubble Telescope": {
     "PostName": "Hubble Telescope",
     "PostPriority": 1,
     "PostDate": "11/3/2021",
     "PostUpDate": "",
+    "Category": "Space",
+    "Section": "Academic",
     "SubheaderArray": [
       {
         "SubheaderName": "Maintenance",
@@ -65,11 +71,13 @@
       }
     ]
   },
-  {
+  "How to Vote": {
     "PostName": "How to Vote",
     "PostPriority": 1,
     "PostDate": "11/3/2021",
     "PostUpDate": "",
+    "Category": "Ongoing News",
+    "Section": "News",
     "SubheaderArray": [
       {
         "SubheaderName": "Introduction",
@@ -165,11 +173,13 @@
       }
     ]
   },
-  {
+  "7/28/2020": {
     "PostName": "7/28/2020",
     "PostPriority": 1,
     "PostDate": "7/28/2020",
     "PostUpDate": "",
+    "Category": "Current Events",
+    "Section": "News",
     "SubheaderArray": [
       {
         "SubheaderName": "Domestic News",
@@ -317,11 +327,13 @@
       }
     ]
   },
-  {
+  "7/29/2020": {
     "PostName": "7/29/2020",
     "PostPriority": 2,
     "PostDate": "7/29/2020",
     "PostUpDate": "",
+    "Category": "Current Events",
+    "Section": "News",
     "SubheaderArray": [
       {
         "SubheaderName": "Domestic News",
@@ -445,11 +457,13 @@
       }
     ]
   },
-  {
+  "The National Debt": {
     "PostName": "The National Debt",
     "PostPriority": 1,
     "PostDate": "10/21/2021",
     "PostUpDate": "",
+    "Category": "Policy Issues",
+    "Section": "News",
     "SubheaderArray": [
       {
         "SubheaderName": "What is the National Debt",
@@ -581,4 +595,4 @@
       }
     ]
   }
-]
+}

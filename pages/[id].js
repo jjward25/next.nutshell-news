@@ -2,28 +2,45 @@ import HomePostCard from "../front-components/home-post-card";
 import Image from "next/image";
 import styles from "../styles/Pages.module.scss";
 import { useRouter } from "next/router";
+import postObjList from "../postObjList.json";
+import Content from "../content.json";
 
 export default function Article() {
   const router = useRouter();
+  const post = postObjList[router.query.id];
+  console.log(post);
+  const category = post.Category;
+  const relatedPosts = Content[post.Section].filter(
+    (category) => category.CategoryName == post.Category
+  )[0].PostArray;
+  console.log(relatedPosts);
 
   return (
     <div className={styles["container"]}>
-      <div>Post #{router.query.id}</div>
       <main className={styles["main"]}>
         <div className={styles["home-content-wrap"]}>
           <div className={styles["related-posts"]}>
             <div className={styles["font-category-header"]}>Related Posts</div>
             <div className={styles["home-posts-wrap"]}>
-              <HomePostCard />
+              {relatedPosts
+                .filter((relatedPost) => relatedPost.PostName != post.PostName)
+                .map((relatedPost) => {
+                  return (
+                    <HomePostCard
+                      key={relatedPost.PostName}
+                      postName={relatedPost.PostName}
+                      subheaderList={relatedPost.SubheaderArray}
+                      category={category}
+                    />
+                  );
+                })}
             </div>
           </div>
 
           <div className={styles["article-main-card"]}>
-            <div className={styles["post-category-text"]}>POLICY ISSUES</div>
+            <div className={styles["post-category-text"]}>{post.Category}</div>
 
-            <div
-              className={styles["font-title-header"]}
-            >{`Data Analytics`}</div>
+            <div className={styles["font-title-header"]}>{post.PostName}</div>
 
             <div className={styles["post-intro-text"]}>
               Text lorum ipsum this is an article about latin language influence

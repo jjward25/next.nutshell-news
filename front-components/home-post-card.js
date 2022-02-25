@@ -5,22 +5,12 @@ import React, { useState } from "react";
 import Link from "next/link";
 import postObjList from "../postObjList.json";
 
-const ROUTE_POST_ID = "posts/[id]";
+const ROUTE_POST_ID = "/[id]";
 
 export default function HomePostCard(props) {
   const [rotateChevron, setRotateChevron] = useState(false);
   function shExtend() {
     setRotateChevron(!rotateChevron);
-  }
-
-  const [postObj, setPostObj] = useState({});
-  function selectPost(selectedPost) {
-    setPostObj(
-      postObjList.filter((post) => {
-        post.PostName == selectedPost;
-      })
-    );
-    console.log(postObj);
   }
 
   return (
@@ -35,15 +25,10 @@ export default function HomePostCard(props) {
             pathname: ROUTE_POST_ID,
             query: { id: props.postName },
           }}
-          as={`/post/${props.postName}`}
+          as={props.category + "/" + props.postName}
           passHref
         >
-          <div
-            className={styles["post-title"]}
-            onClick={() => selectPost(props.postName)}
-          >
-            {props.postName}
-          </div>
+          <div className={styles["post-title"]}>{props.postName}</div>
         </Link>
 
         <div

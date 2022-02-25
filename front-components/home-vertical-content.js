@@ -24,6 +24,7 @@ export default function HomeVerticals(props) {
                       key={post.PostName}
                       postName={post.PostName}
                       subheaderList={post.SubheaderArray}
+                      category={category.CategoryName}
                     />
                   );
                 })}

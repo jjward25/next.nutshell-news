@@ -21,11 +21,11 @@ print(postList)
 ########
 # Create arrays of Category object for each section
 ########
-
-postObjList = []
-postDupes = []
-postNames=[]
-for post in postList:      
+contentObjList = {}
+for post in postList:
+    postObjList = []
+    postDupes = []
+    postNames=[]
     for contentRowObj in inputObj.values():
         if contentRowObj['PostName'] == post:
             postDict = {}   
@@ -33,17 +33,20 @@ for post in postList:
             postDict.setdefault("PostPriority",contentRowObj['PostPriority'])
             postDict.setdefault("PostDate",contentRowObj['PostDate'])
             postDict.setdefault("PostUpDate",contentRowObj['PostUpDate'])
-                
+            postDict.setdefault("Category",contentRowObj['Category'])
+            postDict.setdefault("Section",contentRowObj['Section'])
+            postObjList = [i for n, i in enumerate(postDupes) if i not in postObjList[n + 1:]]  
             if contentRowObj['PostName'] in postNames:
                continue
             else:
                 postDupes.append(postDict)
                 postNames.append(contentRowObj['PostName']) ## Fill list w postNames so the next time the postName comes up it's in the list and no object will be created    
-postObjList = [i for n, i in enumerate(postDupes) if i not in postObjList[n + 1:]]  
-#print(postObjList)
+            contentObjList.setdefault(contentRowObj['PostName'],postDict)
 
-## Subheaders
-for postObj in postObjList:
+print(contentObjList)
+
+
+for postObj in contentObjList.values():     
     shList = []
     shDupes = []
     shNames = []
@@ -53,7 +56,7 @@ for postObj in postObjList:
             shDict = {}
             shDict.setdefault("SubheaderName",contentRowObj['SubheaderName'])
             shDict.setdefault("SubheaderPriority",contentRowObj['SubheaderPriority'])
-    
+            
             if contentRowObj['SubheaderName'] not in shNames:
                 shDupes.append(shDict)
                 shNames.append(contentRowObj['SubheaderName']) ## Fill list w postNames so the next time the postName comes up it's in the list and no object will be created
@@ -61,13 +64,12 @@ for postObj in postObjList:
                 continue
         else:
             continue
-
     shList = [i for n, i in enumerate(shDupes) if i not in shList[n + 1:]]  
     postObj.setdefault("SubheaderArray",shList)
 #print(postObjList)
 
 ## Posts
-for postObj in postObjList:
+for postObj in contentObjList.values():   
     for shObj in postObj['SubheaderArray']:
         bulletList = []
         bulletDupes = []
@@ -94,6 +96,6 @@ for postObj in postObjList:
         shObj.setdefault("BulletArray",bulletList)
 
 
-pp.pprint(postObjList)
+#pp.pprint(contentObjList)
 with open("postObjList.json", "w") as write_file:
-    json.dump(postObjList, write_file, indent=4)
+    json.dump(contentObjList, write_file, indent=4)
