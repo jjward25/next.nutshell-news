@@ -1,5 +1,8 @@
 import styles from "../styles/Components.module.scss";
 import posts from "../public/posts.json";
+import Link from "next/link";
+
+const ROUTE_POST_ID = "/[id]";
 
 export default function CurrentEvents() {
   return (
@@ -26,11 +29,29 @@ export default function CurrentEvents() {
                 <div className={styles["ce-card-header"]}>
                   <div className={styles["ce-card-subheader"]}>
                     <div className={styles["subheader-text"]}>
-                      {post.SubheaderName}
+                      <Link
+                        href={{
+                          pathname: ROUTE_POST_ID,
+                          query: { id: post.PostName },
+                        }}
+                        as={post.PostName}
+                        passHref
+                      >
+                        {post.SubheaderName}
+                      </Link>
                     </div>
                   </div>
                   <div className={styles["ce-card-postdate"]}>
-                    {post.PostDate}
+                    <Link
+                      href={{
+                        pathname: ROUTE_POST_ID,
+                        query: { id: post.PostName },
+                      }}
+                      as={post.PostName}
+                      passHref
+                    >
+                      {post.PostDate}
+                    </Link>
                   </div>
                 </div>
 
