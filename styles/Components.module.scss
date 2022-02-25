@@ -25,7 +25,7 @@
 /***** CURRENT EVENTS CARD *****/
 /***** CURRENT EVENTS CARD *****/
 .current-events {
-  margin: 0vh 0 2vh 5vw;
+  margin: 0vh 0 10px 5vw;
   width: 95vw;
   @include for-desktop-up {
     margin: 0 0 0 25px;
@@ -265,14 +265,29 @@
   font-weight: 400;
 }
 /***** HOME POST CARD *****/
-
+.full-home-card {
+  margin: 10px 0;
+}
+.full-home-card-open {
+  margin: 10px 0 20px 0;
+}
+.font-category-header {
+  padding: 10px 0 10px 0px;
+  font-size: 30px;
+  color: #1ac182;
+  font-family: "Sanchez", serif;
+  @include for-desktop-up {
+    text-align: left;
+  }
+}
 .home-post-card {
   background-color: #ffffff;
-  border-radius: 4px;
   display: flex;
   margin: 10px 0;
   width: 80vw;
   height: 5.5vh;
+  border-radius: 10px;
+  overflow: hidden;
 
   @include for-desktop-up {
     display: flex;
@@ -285,7 +300,8 @@
 }
 .home-post-card-open {
   background-color: #ffffff;
-  border-radius: 4px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
   display: flex;
 
   width: 80vw;
@@ -352,6 +368,7 @@
   background-color: #ffffff;
   border-radius: 4px;
   margin: auto 0;
+  border-radius: 0px;
   @include for-desktop-up {
     display: flex;
     width: 350px;
@@ -397,13 +414,4 @@
 
 .home-posts-wrap {
   margin: 0 25px;
-}
-.font-category-header {
-  padding: 10px 0 10px 0px;
-  font-size: 30px;
-  color: #1ac182;
-  font-family: "Sanchez", serif;
-  @include for-desktop-up {
-    text-align: left;
-  }
 }
