@@ -9,11 +9,12 @@ import Accordion from "../front-components/postAccordion";
 
 export default function Article() {
   const router = useRouter();
-  const post = postObjList[router.query.id];
-
+  var post = postObjList[router.query.id];
   var category = "";
+
   if (typeof post == "undefined") {
-    category = "Current Events";
+    post = postObjList["How to Vote"];
+    category = postObjList["How to Vote"].Category;
   } else {
     category = post.Category;
   }
@@ -73,7 +74,7 @@ export default function Article() {
 
             <div className={styles["post-intro-text"]}>{introText}</div>
             <ul className={styles["accordion"]}>
-              {postObjList[router.query.id].SubheaderArray.filter(
+              {post.SubheaderArray.filter(
                 (postObj) => postObj.SubheaderName != "Introduction"
               ).map((postObj) => {
                 return (
