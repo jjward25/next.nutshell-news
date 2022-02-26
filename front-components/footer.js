@@ -7,7 +7,7 @@ export default function Footer() {
     <div className={styles["footerwrap"]}>
       <div className={styles["footer-left"]}>
         <div className={styles["footerlogowrap"]}>
-          <Link href="/">
+          <Link href="/" passHref>
             <span className={styles["footer-logo"]}>
               <Image
                 src="/acorn-grey.svg"
@@ -18,29 +18,26 @@ export default function Footer() {
             </span>
           </Link>
 
-          <Link href="/">
+          <Link href="/" passHref>
             <h1 className={styles["headertitle"]}>nutshell news</h1>
           </Link>
         </div>
 
-        <p style={{ paddingLeft: "20px", paddingTop: "2.5px" }}>
-          Copyright Nutshell News
-        </p>
+        <p style={{ paddingLeft: "20px", margin: "5px" }}>Copyright 2022</p>
       </div>
 
       <ul className={styles["footerbuttonslist"]}>
         <li className={styles["footerbuttons"]}>
-          <Link href="/">News</Link>
+          <a
+            href="https://twitter.com/NutshellNewsCo"
+            target="_blank"
+            rel="noreferrer"
+            alt="Twitter"
+          >
+            Twitter
+          </a>
         </li>
-        <li className={styles["footerbuttons"]}>
-          <Link href="/life">Life</Link>
-        </li>
-        <li className={styles["footerbuttons"]}>
-          <Link href="/academic">Academic</Link>
-        </li>
-        <li className={styles["footerbuttons"]}>
-          <Link href="/readinglist">Readling List</Link>
-        </li>
+
         <li className={styles["footerbuttons"]}>
           <Link href="/about">About</Link>
         </li>

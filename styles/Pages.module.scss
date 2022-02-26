@@ -23,7 +23,7 @@
 /**** GLOBAL ELEMENTS *****/
 .container {
   padding: 0 0;
-  min-height: calc(100vh - 168px);
+  min-height: calc(100vh - 148px);
   height: 100%;
 }
 .main {
@@ -31,7 +31,7 @@
   min-height: 100vh;
   margin-top: 60px;
   @include for-desktop-up {
-    min-height: calc(100vh - 168px);
+    min-height: calc(100vh - 148px);
     height: 100%;
   }
 }
