@@ -9,11 +9,12 @@ export default function Home() {
     <div className={styles["container"]}>
       <Head>
         <title>Nutshell News</title>
+
         <meta
           name="description"
           content="Adult Education for the Modern World"
         />
-        <link rel="icon" href="/acorn.ico" />
+        <link rel="icon" href="/acorn.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
