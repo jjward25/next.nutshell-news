@@ -4,6 +4,7 @@ import styles from "../styles/Pages.module.scss";
 import { useRouter } from "next/router";
 import postObjList from "../postObjList.json";
 import Content from "../content.json";
+import { useState } from "react";
 import Accordion from "../front-components/postAccordion";
 
 export default function Article() {

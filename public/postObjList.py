@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import pprint
+from operator import itemgetter
 pp = pprint.PrettyPrinter(indent=4)
 
 ## Initial Excel reading and dataframe creation
@@ -35,7 +36,8 @@ for post in postList:
             postDict.setdefault("PostUpDate",contentRowObj['PostUpDate'])
             postDict.setdefault("Category",contentRowObj['Category'])
             postDict.setdefault("Section",contentRowObj['Section'])
-            postObjList = [i for n, i in enumerate(postDupes) if i not in postObjList[n + 1:]]  
+            postObjList = [i for n, i in enumerate(postDupes) if i not in postObjList[n + 1:]] 
+            postObjList = sorted(postObjList, key=itemgetter('PostPriority'))  
             if contentRowObj['PostName'] in postNames:
                continue
             else:
@@ -65,6 +67,7 @@ for postObj in contentObjList.values():
         else:
             continue
     shList = [i for n, i in enumerate(shDupes) if i not in shList[n + 1:]]  
+    shList = sorted(shList, key=itemgetter('SubheaderPriority'))  
     postObj.setdefault("SubheaderArray",shList)
 #print(postObjList)
 
@@ -93,6 +96,7 @@ for postObj in contentObjList.values():
                 continue
 
         bulletList = [i for n, i in enumerate(bulletDupes) if i not in bulletList[n + 1:]]  
+        bulletList = sorted(bulletList, key=itemgetter('BulletPriority'))  
         shObj.setdefault("BulletArray",bulletList)
 
 

@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import pprint
+from operator import itemgetter
 pp = pprint.PrettyPrinter(indent=4)
 
 ## Initial Excel reading and dataframe creation
@@ -33,6 +34,7 @@ for section in sectionList:
             categoryDict.setdefault("CategoryPriority",contentRowObj['CategoryPriority'])
             catDupes.append(categoryDict)
             categoryList = [i for n, i in enumerate(catDupes) if i not in catDupes[n + 1:]]
+            categoryList = sorted(categoryList, key=itemgetter('CategoryPriority')) 
             contentObj[contentRowObj['Section']]=categoryList
         else:
             continue        
@@ -67,6 +69,7 @@ for categoryObjList in contentObj.values():
                 continue
 
         postList = [i for n, i in enumerate(postDupes) if i not in postList[n + 1:]]  
+        postList = sorted(postList, key=itemgetter('PostPriority')) 
         categoryObj.setdefault("PostArray",postList)
 
 
@@ -98,6 +101,7 @@ for categoryObjList in contentObj.values():
                     continue
 
             shList = [i for n, i in enumerate(shDupes) if i not in shList[n + 1:]]  
+            shList = sorted(shList, key=itemgetter('SubheaderPriority')) 
             postObj.setdefault("SubheaderArray",shList)
             #pp.pprint(sectionList)
 
@@ -134,6 +138,7 @@ for categoryObjList in contentObj.values():
                         continue
 
                 bulletList = [i for n, i in enumerate(bulletDupes) if i not in bulletList[n + 1:]]  
+                bulletList = sorted(bulletList, key=itemgetter('BulletPriority')) 
                 shObj.setdefault("BulletArray",bulletList)
                 #pp.pprint(sectionList)
 

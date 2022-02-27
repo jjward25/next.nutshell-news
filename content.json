@@ -1,134 +1,6 @@
 {
   "News": [
     {
-      "CategoryName": "Ongoing News",
-      "CategoryPriority": 2,
-      "PostArray": [
-        {
-          "PostName": "Hurricane",
-          "PostPriority": 2,
-          "PostDate": "11/4/2021",
-          "PostUpDate": "",
-          "SubheaderArray": [
-            {
-              "SubheaderName": "How big is it?",
-              "SubheaderPriority": 1,
-              "BulletArray": [
-                {
-                  "BulletText": "Hurricane Ida is expected to land as a Category 4 this afternoon in Louisiana.",
-                  "BulletPriority": 1,
-                  "BulletCite": "NYT",
-                  "BulletLink": "www.nytimes.com",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "PostName": "How to Vote",
-          "PostPriority": 1,
-          "PostDate": "11/3/2021",
-          "PostUpDate": "",
-          "SubheaderArray": [
-            {
-              "SubheaderName": "Introduction",
-              "SubheaderPriority": 0,
-              "BulletArray": [
-                {
-                  "BulletText": "This article is intended to highlight the typical responsibilities and powers of elected representatives at different levels of government.  From there, you can determine who you want in what position.",
-                  "BulletPriority": 1,
-                  "BulletCite": "",
-                  "BulletLink": "",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                }
-              ]
-            },
-            {
-              "SubheaderName": "Congress",
-              "SubheaderPriority": 1,
-              "BulletArray": [
-                {
-                  "BulletText": "The House of Representatives has the right to impeach government officials (prosecutor), while the Senate conducts the trials (judge and jury).  ",
-                  "BulletPriority": 1,
-                  "BulletCite": "Senate.gov",
-                  "BulletLink": "https://www.senate.gov/history/powers.htm",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                },
-                {
-                  "BulletText": "The Senate \"advises and consents\" to the President's choices for \"Ambassadors, other public Ministers and Consuls, Judges of the Supreme Court, and all other Officers of the United States\", like the Attorney General and other important bureaucratic roles.",
-                  "BulletPriority": 2,
-                  "BulletCite": "Senate.gov",
-                  "BulletLink": "https://www.senate.gov/history/powers.htm",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                },
-                {
-                  "BulletText": "While the President has the power to enter into certain agreements without Congressional approval, the Senate does have the power to ratify and amend treaties with a 2/3 majority.",
-                  "BulletPriority": 3,
-                  "BulletCite": "Senate.gov",
-                  "BulletLink": "https://www.senate.gov/history/powers.htm",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                },
-                {
-                  "BulletText": "Each house of Congress has the power to investigate a wide array of issues and to introduce legislation. Both houses must pass the same bill to send the bill to the President to be signed into law.",
-                  "BulletPriority": 4,
-                  "BulletCite": "Senate.gov",
-                  "BulletLink": "https://www.senate.gov/artandhistory/history/common/briefing/Investigations.htm",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                },
-                {
-                  "BulletText": "The House initiates revenue bills, including talks about the annual budget for the country.  The House also has the authority to elect a President in the case of an electoral tie.",
-                  "BulletPriority": 5,
-                  "BulletCite": "Whitehouse.gov",
-                  "BulletLink": "https://www.whitehouse.gov/about-the-white-house/the-legislative-branch/",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                },
-                {
-                  "BulletText": "Executive Branch agencies issue regulations with the full force of law, but these are only under the authority of laws enacted by Congress. The President may veto bills Congress passes, but Congress may also override a veto by a two-thirds vote in both the Senate and the House of Representatives.",
-                  "BulletPriority": 6,
-                  "BulletCite": "Whitehouse.gov",
-                  "BulletLink": "https://www.whitehouse.gov/about-the-white-house/the-legislative-branch/",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                },
-                {
-                  "BulletText": "Part of Congress\u2019s exercise of legislative authority is the establishment of an annual budget for the government. To this end, Congress levies taxes and tariffs to provide funding for essential government services or borrows.",
-                  "BulletPriority": 7,
-                  "BulletCite": "Whitehouse.gov",
-                  "BulletLink": "https://www.whitehouse.gov/about-the-white-house/the-legislative-branch/",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                },
-                {
-                  "BulletText": "The House Committee on Oversight and Government Reform and the Senate Committee on Homeland Security and Government Affairs are both devoted to overseeing and reforming government operations, and each committee conducts oversight in its policy area.  Congress also maintains an investigative organization, the Government Accountability Office (GAO).",
-                  "BulletPriority": 8,
-                  "BulletCite": "Whitehouse.gov",
-                  "BulletLink": "https://www.whitehouse.gov/about-the-white-house/the-legislative-branch/",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                },
-                {
-                  "BulletText": "The House tends to bring bills through relevant committees whereas the Senate has more open and broad debates.  ",
-                  "BulletPriority": 9,
-                  "BulletCite": "VoteSmart",
-                  "BulletLink": "https://votesmart.org/education/congress",
-                  "BulletPostDate": "1/1/2021",
-                  "BulletUpDate": ""
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "CategoryName": "Current Events",
       "CategoryPriority": 1,
       "PostArray": [
@@ -405,6 +277,134 @@
                   "BulletPriority": 4,
                   "BulletCite": "Scientific American",
                   "BulletLink": "https://www.scientificamerican.com/article/poor-pluto-is-ten-times-smaller-than-thought/",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "CategoryName": "Ongoing News",
+      "CategoryPriority": 2,
+      "PostArray": [
+        {
+          "PostName": "How to Vote",
+          "PostPriority": 1,
+          "PostDate": "11/3/2021",
+          "PostUpDate": "",
+          "SubheaderArray": [
+            {
+              "SubheaderName": "Introduction",
+              "SubheaderPriority": 0,
+              "BulletArray": [
+                {
+                  "BulletText": "This article is intended to highlight the typical responsibilities and powers of elected representatives at different levels of government.  From there, you can determine who you want in what position.",
+                  "BulletPriority": 1,
+                  "BulletCite": "",
+                  "BulletLink": "",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                }
+              ]
+            },
+            {
+              "SubheaderName": "Congress",
+              "SubheaderPriority": 1,
+              "BulletArray": [
+                {
+                  "BulletText": "The House of Representatives has the right to impeach government officials (prosecutor), while the Senate conducts the trials (judge and jury).  ",
+                  "BulletPriority": 1,
+                  "BulletCite": "Senate.gov",
+                  "BulletLink": "https://www.senate.gov/history/powers.htm",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                },
+                {
+                  "BulletText": "The Senate \"advises and consents\" to the President's choices for \"Ambassadors, other public Ministers and Consuls, Judges of the Supreme Court, and all other Officers of the United States\", like the Attorney General and other important bureaucratic roles.",
+                  "BulletPriority": 2,
+                  "BulletCite": "Senate.gov",
+                  "BulletLink": "https://www.senate.gov/history/powers.htm",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                },
+                {
+                  "BulletText": "While the President has the power to enter into certain agreements without Congressional approval, the Senate does have the power to ratify and amend treaties with a 2/3 majority.",
+                  "BulletPriority": 3,
+                  "BulletCite": "Senate.gov",
+                  "BulletLink": "https://www.senate.gov/history/powers.htm",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                },
+                {
+                  "BulletText": "Each house of Congress has the power to investigate a wide array of issues and to introduce legislation. Both houses must pass the same bill to send the bill to the President to be signed into law.",
+                  "BulletPriority": 4,
+                  "BulletCite": "Senate.gov",
+                  "BulletLink": "https://www.senate.gov/artandhistory/history/common/briefing/Investigations.htm",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                },
+                {
+                  "BulletText": "The House initiates revenue bills, including talks about the annual budget for the country.  The House also has the authority to elect a President in the case of an electoral tie.",
+                  "BulletPriority": 5,
+                  "BulletCite": "Whitehouse.gov",
+                  "BulletLink": "https://www.whitehouse.gov/about-the-white-house/the-legislative-branch/",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                },
+                {
+                  "BulletText": "Executive Branch agencies issue regulations with the full force of law, but these are only under the authority of laws enacted by Congress. The President may veto bills Congress passes, but Congress may also override a veto by a two-thirds vote in both the Senate and the House of Representatives.",
+                  "BulletPriority": 6,
+                  "BulletCite": "Whitehouse.gov",
+                  "BulletLink": "https://www.whitehouse.gov/about-the-white-house/the-legislative-branch/",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                },
+                {
+                  "BulletText": "Part of Congress\u2019s exercise of legislative authority is the establishment of an annual budget for the government. To this end, Congress levies taxes and tariffs to provide funding for essential government services or borrows.",
+                  "BulletPriority": 7,
+                  "BulletCite": "Whitehouse.gov",
+                  "BulletLink": "https://www.whitehouse.gov/about-the-white-house/the-legislative-branch/",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                },
+                {
+                  "BulletText": "The House Committee on Oversight and Government Reform and the Senate Committee on Homeland Security and Government Affairs are both devoted to overseeing and reforming government operations, and each committee conducts oversight in its policy area.  Congress also maintains an investigative organization, the Government Accountability Office (GAO).",
+                  "BulletPriority": 8,
+                  "BulletCite": "Whitehouse.gov",
+                  "BulletLink": "https://www.whitehouse.gov/about-the-white-house/the-legislative-branch/",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                },
+                {
+                  "BulletText": "The House tends to bring bills through relevant committees whereas the Senate has more open and broad debates.  ",
+                  "BulletPriority": 9,
+                  "BulletCite": "VoteSmart",
+                  "BulletLink": "https://votesmart.org/education/congress",
+                  "BulletPostDate": "1/1/2021",
+                  "BulletUpDate": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "PostName": "Hurricane",
+          "PostPriority": 2,
+          "PostDate": "11/4/2021",
+          "PostUpDate": "",
+          "SubheaderArray": [
+            {
+              "SubheaderName": "How big is it?",
+              "SubheaderPriority": 1,
+              "BulletArray": [
+                {
+                  "BulletText": "Hurricane Ida is expected to land as a Category 4 this afternoon in Louisiana.",
+                  "BulletPriority": 1,
+                  "BulletCite": "NYT",
+                  "BulletLink": "www.nytimes.com",
                   "BulletPostDate": "1/1/2021",
                   "BulletUpDate": ""
                 }
