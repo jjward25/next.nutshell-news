@@ -7,9 +7,11 @@ import Content from "../content.json";
 import Accordion from "../front-components/postAccordion";
 import postObjList from "../postObjList.json";
 
-export default function Article(articleId, postData) {
+export default function Article(props) {
+  console.log(props.postData);
   const router = useRouter();
-  var post = postData[router.query.id];
+  var post = props.postData[router.query.id];
+  console.log(post);
   var category = "";
 
   if (typeof post == "undefined") {
