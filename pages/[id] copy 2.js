@@ -5,11 +5,11 @@ import { useRouter } from "next/router";
 import postObjDict from "../postObjDict.json";
 import Content from "../content.json";
 import Accordion from "../front-components/postAccordion";
-import postObjList from "../postObjList.json";
+import { getAllPostIds, getPostData } from "../front-components/home-post-card";
 
-export default function Article(articleId, postData) {
+export default function Article() {
   const router = useRouter();
-  var post = postData[router.query.id];
+  var post = postObjDict[router.query.id];
   var category = "";
 
   if (typeof post == "undefined") {
@@ -145,26 +145,22 @@ export default function Article(articleId, postData) {
     </div>
   );
 }
-// Set the postNames to the path parameter for dynamic routes
-export const getStaticPaths = async () => {
-  const articles = await postObjList;
-  const paths = articles.map((article) => ({
-    params: { id: article.PostName },
-  }));
 
+export async function getStaticPaths() {
+  // Return a list of possible value for id
+  const paths = getAllPostIds();
   return {
     paths,
     fallback: false,
   };
-};
+}
 
-export const getStaticProps = async (ctx) => {
-  const articleId = ctx.params.id;
-  const postData = postObjDict;
-
-  // fetch the data using the article id and return as props
-
+export async function getStaticProps({ params }) {
+  const postData = getPostData(params.id);
+  console.log(postData);
   return {
-    props: { articleId, postData },
+    props: {
+      postData,
+    },
   };
-};
+}

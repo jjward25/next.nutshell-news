@@ -1,5 +1,5 @@
-[
-  {
+{
+  "Hurricane": {
     "PostName": "Hurricane",
     "PostPriority": 2,
     "PostDate": "11/4/2021",
@@ -23,7 +23,7 @@
       }
     ]
   },
-  {
+  "Data Science": {
     "PostName": "Data Science",
     "PostPriority": 1,
     "PostDate": "11/3/2021",
@@ -47,7 +47,7 @@
       }
     ]
   },
-  {
+  "Hubble Telescope": {
     "PostName": "Hubble Telescope",
     "PostPriority": 1,
     "PostDate": "11/3/2021",
@@ -71,7 +71,7 @@
       }
     ]
   },
-  {
+  "How to Vote": {
     "PostName": "How to Vote",
     "PostPriority": 1,
     "PostDate": "11/3/2021",
@@ -173,7 +173,7 @@
       }
     ]
   },
-  {
+  "7/28/2020": {
     "PostName": "7/28/2020",
     "PostPriority": 1,
     "PostDate": "7/28/2020",
@@ -327,7 +327,7 @@
       }
     ]
   },
-  {
+  "7/29/2020": {
     "PostName": "7/29/2020",
     "PostPriority": 2,
     "PostDate": "7/29/2020",
@@ -457,7 +457,7 @@
       }
     ]
   },
-  {
+  "The National Debt": {
     "PostName": "The National Debt",
     "PostPriority": 1,
     "PostDate": "10/21/2021",
@@ -595,4 +595,4 @@
       }
     ]
   }
-]
+}

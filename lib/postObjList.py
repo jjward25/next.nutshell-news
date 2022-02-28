@@ -22,7 +22,7 @@ print(postList)
 ########
 # Create arrays of Category object for each section
 ########
-contentObjList = {}
+contentObjList = []
 for post in postList:
     postObjList = []
     postDupes = []
@@ -43,12 +43,12 @@ for post in postList:
             else:
                 postDupes.append(postDict)
                 postNames.append(contentRowObj['PostName']) ## Fill list w postNames so the next time the postName comes up it's in the list and no object will be created    
-            contentObjList.setdefault(contentRowObj['PostName'],postDict)
+            contentObjList.append(postDict)
 
 print(contentObjList)
 
 
-for postObj in contentObjList.values():     
+for postObj in contentObjList:     
     shList = []
     shDupes = []
     shNames = []
@@ -72,7 +72,7 @@ for postObj in contentObjList.values():
 #print(postObjList)
 
 ## Posts
-for postObj in contentObjList.values():   
+for postObj in contentObjList:   
     for shObj in postObj['SubheaderArray']:
         bulletList = []
         bulletDupes = []

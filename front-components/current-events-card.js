@@ -1,5 +1,4 @@
 import styles from "../styles/Components.module.scss";
-
 import Link from "next/link";
 const ROUTE_POST_ID = "/[id]";
 import cePosts from "../cePostList.json";

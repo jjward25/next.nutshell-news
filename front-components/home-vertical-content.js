@@ -1,6 +1,5 @@
 import HomePostCard from "./home-post-card";
 import styles from "../styles/Components.module.scss";
-import Content from "../content.json";
 import React from "react";
 
 export default function HomeVerticals(props) {
@@ -35,17 +34,3 @@ export default function HomeVerticals(props) {
     </div>
   );
 }
-/*
-<div
-  className={styles["current-events-card"]}
-  key={
-    post.Category +
-    "." +
-    post.PostPriority +
-    "." +
-    post.SubheaderPriority +
-    "." +
-    post.BulletPriority
-  }
-></div>;
-*/
