@@ -24,7 +24,7 @@ export default function HomePostCard(props) {
             pathname: ROUTE_POST_ID,
             query: { id: props.postName },
           }}
-          as={props.category + "/" + props.postName}
+          as={props.postName}
           passHref
         >
           <div className={styles["post-title"]}>{props.postName}</div>
