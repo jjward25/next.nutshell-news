@@ -173,8 +173,8 @@
       }
     ]
   },
-  "7/28/2020": {
-    "PostName": "7/28/2020",
+  "7-28-2020": {
+    "PostName": "7-28-2020",
     "PostPriority": 1,
     "PostDate": "7/28/2020",
     "PostUpDate": "",
@@ -228,7 +228,7 @@
         ]
       },
       {
-        "SubheaderName": "International News",
+        "SubheaderName": "International",
         "SubheaderPriority": 2,
         "BulletArray": [
           {
@@ -327,8 +327,8 @@
       }
     ]
   },
-  "7/29/2020": {
-    "PostName": "7/29/2020",
+  "7-29-2020": {
+    "PostName": "7-29-2020",
     "PostPriority": 2,
     "PostDate": "7/29/2020",
     "PostUpDate": "",
@@ -366,7 +366,7 @@
         ]
       },
       {
-        "SubheaderName": "International News",
+        "SubheaderName": "International",
         "SubheaderPriority": 2,
         "BulletArray": [
           {

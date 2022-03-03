@@ -14,13 +14,6 @@ export default function Article(props) {
   //console.log(post);
   var category = "";
 
-  if (typeof post == "undefined") {
-    post = postObjDict["How to Vote"];
-    category = postObjDict["How to Vote"].Category;
-  } else {
-    category = post.Category;
-  }
-
   var relatedPosts = [];
   if (typeof post == "undefined") {
     relatedPosts = Content["News"].filter(

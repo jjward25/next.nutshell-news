@@ -31,12 +31,6 @@ export default function About() {
             <br />
             {`Casually Adept is news for people who hate the news.`}
           </p>
-          <div className={styles["font-category-header"]}>
-            {`Privacy Policy & Terms`}
-          </div>
-          <p className={styles["about-text"]}>
-            {`We only collect your login information and the list of posts you're tracking.`}
-          </p>
         </div>
       </main>
     </div>
