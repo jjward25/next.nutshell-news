@@ -8,20 +8,6 @@ import { useState, useEffect } from "react";
 import { SectionModel } from "../src/models";
 
 export default function Home() {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    fetchPosts();
-    async function fetchPosts() {
-      const postData = await DataStore.query(SectionModel);
-      setPosts(postData);
-    }
-    const subscription = DataStore.observe(SectionModel).subscribe(() =>
-      fetchPosts()
-    );
-    return () => subscription.unsubscribe();
-  }, []);
-  console.log(posts[0]);
-
   return (
     <div className={styles["container"]}>
       <Head>
