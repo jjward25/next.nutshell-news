@@ -161,5 +161,6 @@ export const getStaticProps = async (ctx) => {
 
   return {
     props: { articleId, postData },
+    revalidate: 10,
   };
 };

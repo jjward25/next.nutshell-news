@@ -1,0 +1,43 @@
+type SectionModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  SectionName: String
+  CategoryModels: [CategoryModel] @hasMany(indexName: "bySectionModel", fields: ["id"])
+}
+
+type CategoryModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  CategoryName: String
+  CategoryPriority: Int
+  PostModels: [PostModel] @hasMany(indexName: "byCategoryModel", fields: ["id"])
+  sectionmodelID: ID! @index(name: "bySectionModel")
+}
+
+type PostModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  PostName: String
+  PostPriority: Int
+  PostDate: String
+  PostUpdate: String
+  SubheaderModels: [SubheaderModel] @hasMany(indexName: "byPostModel", fields: ["id"])
+  categorymodelID: ID! @index(name: "byCategoryModel")
+}
+
+type SubheaderModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  SubheaderName: String
+  SubheaderPriority: Int
+  BulletModels: [BulletModel] @hasMany(indexName: "bySubheaderModel", fields: ["id"])
+  postmodelID: ID! @index(name: "byPostModel")
+}
+
+type BulletModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  BulletText: String
+  BulletPriority: Int
+  BulletLink: String
+  BulletCite: String
+  BulletPostDate: AWSDateTime
+  BulletUpdate: AWSDateTime
+  subheadermodelID: ID! @index(name: "bySubheaderModel")
+}
+ 
