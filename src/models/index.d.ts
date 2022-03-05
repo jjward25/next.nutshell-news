@@ -1,28 +1,28 @@
-import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplify/datastore";
-
-
-
-
+import {
+  ModelInit,
+  MutableModel,
+  PersistentModelConstructor,
+} from "@aws-amplify/datastore";
 
 type SectionModelMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
-}
+  readOnlyFields: "createdAt" | "updatedAt";
+};
 
 type CategoryModelMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
-}
+  readOnlyFields: "createdAt" | "updatedAt";
+};
 
 type PostModelMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
-}
+  readOnlyFields: "createdAt" | "updatedAt";
+};
 
 type SubheaderModelMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
-}
+  readOnlyFields: "createdAt" | "updatedAt";
+};
 
 type BulletModelMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
-}
+  readOnlyFields: "createdAt" | "updatedAt";
+};
 
 export declare class SectionModel {
   readonly id: string;
@@ -31,7 +31,12 @@ export declare class SectionModel {
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<SectionModel, SectionModelMetaData>);
-  static copyOf(source: SectionModel, mutator: (draft: MutableModel<SectionModel, SectionModelMetaData>) => MutableModel<SectionModel, SectionModelMetaData> | void): SectionModel;
+  static copyOf(
+    source: SectionModel,
+    mutator: (
+      draft: MutableModel<SectionModel, SectionModelMetaData>
+    ) => MutableModel<SectionModel, SectionModelMetaData> | void
+  ): SectionModel;
 }
 
 export declare class CategoryModel {
@@ -43,7 +48,12 @@ export declare class CategoryModel {
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<CategoryModel, CategoryModelMetaData>);
-  static copyOf(source: CategoryModel, mutator: (draft: MutableModel<CategoryModel, CategoryModelMetaData>) => MutableModel<CategoryModel, CategoryModelMetaData> | void): CategoryModel;
+  static copyOf(
+    source: CategoryModel,
+    mutator: (
+      draft: MutableModel<CategoryModel, CategoryModelMetaData>
+    ) => MutableModel<CategoryModel, CategoryModelMetaData> | void
+  ): CategoryModel;
 }
 
 export declare class PostModel {
@@ -57,7 +67,12 @@ export declare class PostModel {
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<PostModel, PostModelMetaData>);
-  static copyOf(source: PostModel, mutator: (draft: MutableModel<PostModel, PostModelMetaData>) => MutableModel<PostModel, PostModelMetaData> | void): PostModel;
+  static copyOf(
+    source: PostModel,
+    mutator: (
+      draft: MutableModel<PostModel, PostModelMetaData>
+    ) => MutableModel<PostModel, PostModelMetaData> | void
+  ): PostModel;
 }
 
 export declare class SubheaderModel {
@@ -69,7 +84,12 @@ export declare class SubheaderModel {
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<SubheaderModel, SubheaderModelMetaData>);
-  static copyOf(source: SubheaderModel, mutator: (draft: MutableModel<SubheaderModel, SubheaderModelMetaData>) => MutableModel<SubheaderModel, SubheaderModelMetaData> | void): SubheaderModel;
+  static copyOf(
+    source: SubheaderModel,
+    mutator: (
+      draft: MutableModel<SubheaderModel, SubheaderModelMetaData>
+    ) => MutableModel<SubheaderModel, SubheaderModelMetaData> | void
+  ): SubheaderModel;
 }
 
 export declare class BulletModel {
@@ -84,5 +104,10 @@ export declare class BulletModel {
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<BulletModel, BulletModelMetaData>);
-  static copyOf(source: BulletModel, mutator: (draft: MutableModel<BulletModel, BulletModelMetaData>) => MutableModel<BulletModel, BulletModelMetaData> | void): BulletModel;
+  static copyOf(
+    source: BulletModel,
+    mutator: (
+      draft: MutableModel<BulletModel, BulletModelMetaData>
+    ) => MutableModel<BulletModel, BulletModelMetaData> | void
+  ): BulletModel;
 }
