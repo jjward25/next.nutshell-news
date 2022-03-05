@@ -20,7 +20,7 @@ export default function Home() {
     );
     return () => subscription.unsubscribe();
   }, []);
-  console.log(posts[0].SectionName);
+  console.log(posts[0]);
 
   return (
     <div className={styles["container"]}>
